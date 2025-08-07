@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sw.watches">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--Android14前台服务类型权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        >
+        
+        <activity android:name=".activity.BaseUpgradeActivity"/>
+        <activity android:name=".activity.NotificationActivity"/>
+
+
+        <!--升级类-->
+        <activity
+            android:name="com.realsil.sdk.support.ui.LocalActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/rtk_title_device_info"
+            android:exported="true"
+            android:theme="@style/RtkAppTheme.NoActionBar" >
+            <intent-filter android:priority="1" >
+                <!-- android.content.ActivityNotFoundException: No Activity found to handle Intent { act=rtk.settings.DEVELOPMENT_SETTINGS } -->
+                <action android:name="rtk.action.local.DEVICE_INFO" />
+                <action android:name="rtk.action.local.DEPENDENCE_INFO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.realsil.sdk.support.settings.SettingsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/rtksdk_title_scanner"
+            android:screenOrientation="sensor"
+            android:exported="true"
+            android:theme="@style/RtkAppTheme.NoActionBar" >
+            <intent-filter android:priority="1" >
+                <!-- android.content.ActivityNotFoundException: No Activity found to handle Intent { act=rtk.settings.DEVELOPMENT_SETTINGS } -->
+                <action android:name="rtk.action.settings.BT_SCAN_FILTER" />
+                <action android:name="rtk.action.settings.DEVELOPER_OPTIONS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.realsil.sdk.support.ui.HelpActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/rtk_title_device_info"
+            android:exported="true"
+            android:theme="@style/RtkAppTheme.NoActionBar" >
+            <intent-filter android:priority="1" >
+                <!-- android.content.ActivityNotFoundException: No Activity found to handle Intent { act=rtk.settings.DEVELOPMENT_SETTINGS } -->
+                <action android:name="rtk.settings.HELP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+<!--        <receiver-->
+<!--            android:name="com.sdk.satwatch.receive.BluetoothStateReceive"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"></action>-->
+<!--                <action android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED"></action>-->
+<!--                <action android:name="android.bluetooth.adapter.action.DISCOVERY_STARTED"></action>-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+<!--        <receiver android:name=".receiver.PhoneReceiver"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.PHONE_STATE"/>-->
+<!--                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <!-- Receiver -->
+<!--        <receiver android:name=".receiver.SMSReceiver"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.provider.Telephony.SMS_RECEIVED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <service
+            android:name="com.sw.watches.service.DfuService"
+            android:exported="true"
+            android:foregroundServiceType="connectedDevice"
+            android:label="@string/dfu_service_title">
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.action.DFU_UPLOAD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.sw.watches.service.ZhBraceletService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="store.zootopia.app.service.ZhBraceletService"/>
+            </intent-filter>
+        </service>
+
+       <!-- <service
+            android:name="com.sw.watches.service.NotificationsListenerService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter android:priority="1000">
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>-->
+        <!--C100升级服务-->
+        <service
+            android:name="com.realsil.sdk.dfu.DfuService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+    </application>
+
+</manifest>

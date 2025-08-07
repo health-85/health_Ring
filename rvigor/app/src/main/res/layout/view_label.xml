@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:orientation="horizontal"
+    android:paddingStart="8dp">
+
+    <ImageView
+        android:id="@+id/img_label_left"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_title" />
+
+    <TextView
+        android:id="@+id/tv_label_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="6dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/img_label_left"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="语言设置" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_red"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="3dp"
+        android:src="#F42833"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_title" />
+
+    <ImageView
+        android:id="@+id/img_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_title" />
+
+    <TextView
+        android:id="@+id/tv_label_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginStart="20dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="end|center_vertical"
+        android:maxLines="1"
+        android:minWidth="100dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black_85"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_title"
+        app:layout_constraintEnd_toStartOf="@+id/img_label_right"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_title"
+        />
+
+    <com.kyleduo.switchbutton.SwitchButton
+        android:id="@+id/switch_btn"
+        android:layout_width="51dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="14dp"
+        android:checked="false"
+        android:visibility="gone"
+        app:kswBackDrawable="@drawable/ios_back_drawable"
+        app:kswThumbColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_title" />
+
+    <ImageView
+        android:id="@+id/img_label_right"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="19dp"
+        android:padding="5dp"
+        android:src="@drawable/svg_right"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_title" />
+
+    <TextView
+        android:id="@+id/tv_label_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tv_label_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_title"
+        tools:text="7:30" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

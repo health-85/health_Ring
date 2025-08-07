@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_1a192a_20"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_rule_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:paddingStart="39dp"
+        android:paddingTop="20dp"
+        android:text="@string/weight"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:includeFontPadding="false"
+        android:text="50.0"
+        android:textColor="#6DFFE9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_unit"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rule_title" />
+
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="4dp"
+        android:paddingStart="1dp"
+        android:text="kg"
+        android:textColor="#6DFFE9"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_weight" />
+
+    <com.healthy.rvigor.view.RuleView
+        android:id="@+id/rule_view"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        app:gv_gradationNumberGap="22dp"
+        app:gv_indicatorLineLen="24dp"
+        app:gv_longGradationLen="14dp"
+        app:gv_longLineWidth="2dp"
+        app:gv_shortGradationLen="10dp"
+        app:gv_shortLineWidth="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weight"
+        app:zjun_baseLineColor="@color/transparent"
+        app:zjun_bgColor="#1A192A"
+        app:zjun_indicatorLineColor="#6DFFE9"
+        app:zjun_indicatorLineWidth="4dp"
+        app:zjun_longGradationColor="#3E3E58"
+        app:zjun_radius="4dp"
+        app:zjun_shortGradationColor="#3E3E58"
+        app:zjun_textColor="@color/black_85"
+        app:zjun_textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/rule_view"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sure"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:background="#3E3E58"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_sure" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="#6DFFE9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/rule_view"
+        android:textSize="16sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

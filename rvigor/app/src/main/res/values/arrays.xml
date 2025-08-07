@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="chinese_week_string_array">
+        <item>@string/my_sunday</item>
+        <item>@string/my_monday</item>
+        <item>@string/my_tuesday</item>
+        <item>@string/my_wednesday</item>
+        <item>@string/my_thursday</item>
+        <item>@string/my_friday</item>
+        <item>@string/my_saturday</item>
+    </string-array>
+
+</resources>

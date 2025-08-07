@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sdk.satwatch">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 支持ble的设备 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SdkSatWatch"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.ScanDeviceActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".activity.BraceletActivity" />
+        <activity android:name=".activity.NotifaceActivity" />
+        <activity android:name=".activity.ReminActivity" />
+        <activity android:name=".activity.MeasurementActivity" />
+        <activity android:name=".activity.AlarmActivity" />
+        <activity android:name=".activity.SetUserInfoActivity" />
+        <activity android:name=".activity.UpgradeActivity" />
+        <activity android:name=".activity.WatchSaveActivity" />
+        <activity android:name=".activity.UploadImgActivity" />
+
+        <service
+            android:name="com.sw.watches.service.ZhBraceletService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="store.zootopia.app.service.ZhBraceletService"></action>
+            </intent-filter>
+        </service>
+
+       <!-- <service
+            android:name="com.sw.watches.service.NotificationsListenerService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter android:priority="1000">
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>-->
+        <service
+            android:name="com.sw.watches.service.DfuService"
+            android:exported="true"
+            android:label="@string/dfu_service_title">
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.action.DFU_UPLOAD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.sdk.satwatch.receive.BluetoothStateReceive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.pair"></action>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"></action>
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED"></action>
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_STARTED"></action>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <!--        <service-->
+        <!--            android:name="com.realsil.sdk.dfu.DfuService"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="false">-->
+        <!--        </service>-->
+
+    </application>
+
+</manifest>

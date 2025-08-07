@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Rvigor" parent="Base.Theme.Rvigor">
+        <item name="colorPrimary">@color/color_171525</item>
+        <item name="colorPrimaryDark">@color/color_171525</item>
+        <item name="colorAccent">@color/color_171525</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@color/color_171525</item>
+        <item name="android:windowSplashScreenBackground">@color/color_171525</item>
+        <item name="background">@color/color_171525</item>
+        <item name="backgroundColor">@color/color_171525</item>
+        <item name="android:windowSplashscreenContent">@drawable/svg_splash</item>
+        <item name="android:navigationBarColor">#1A192A</item>
+    </style>
+
+</resources>

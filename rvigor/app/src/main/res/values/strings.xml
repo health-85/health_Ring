@@ -1,0 +1,348 @@
+<resources>
+    <string name="app_name">RVigor</string>
+
+    <string name="loading">加载中...</string>
+    <string name="no_data">暂无数据</string>
+    <string name="sure">确定</string>
+    <string name="notification_not_open">应用通知图标未打开！是否去打开？</string>
+    <string name="correct">是</string>
+    <string name="deny">否</string>
+
+    <!--登录-->
+    <string name="login_phone_tip">未注册的手机号验证通过后将自动创建新账号</string>
+    <string name="please_enter_phone">请输入手机号</string>
+    <string name="login">登录</string>
+    <string name="login_policy">我已阅读并同意用户协议和隐私政策</string>
+    <string name="tourist_mode">游客模式</string>
+    <string name="agree_policy">请先同意隐私协议和服务条款</string>
+    <string name="phone_number_11">请输入11位手机号</string>
+    <string name="login_expired">登录已过期,请重新登录</string>
+
+    <!--个人信息-->
+    <string name="user_msg_title">Hi，填写你的个人信息</string>
+    <string name="user_msg_tip">个人信息仅用作本地个性化计算卡路里消耗和运动心率范围等健康指标分析，我们尊重您的隐私和数据安全，不用担心信息泄露</string>
+    <string name="nickname">昵称</string>
+    <string name="input_nickname">输入昵称</string>
+    <string name="enter">请输入</string>
+    <string name="sex">性别</string>
+    <string name="male">男性</string>
+    <string name="female">女性</string>
+    <string name="birthday">生日</string>
+    <string name="height">身高</string>
+    <string name="weight">体重</string>
+    <string name="verify">确认</string>
+    <string name="skip">跳过</string>
+    <string name="please_select">请选择</string>
+    <string name="personal_data">个人资料</string>
+    <string name="secrecy">保密</string>
+
+    <!--扫描设备-->
+    <string name="scan_device">添加设备</string>
+    <string name="scan_device_tip">将戒指连接充电盒，激活戒指并靠近手机，确保手机已开启蓝牙</string>
+    <string name="scan_device_not_found">未发现设备</string>
+    <string name="scan_device_reason">你可以按以下方式排查原因，重新搜索</string>
+    <string name="scan_device_reason_tip">1.设备不在附近，请将设备靠近手机
+2.设备已耗光电量，请将设备连接充电器，确保设备有电后搜索
+3.手机未开启蓝牙，请打开蓝牙后重新搜索
+4.手机系统蓝牙中已连接该设备，请忽略该设备后重新搜索</string>
+    <string name="scan_research">重新搜索</string>
+    <string name="scanning_device">搜索设备中…</string>
+    <string name="scanning_device_tip">确保手机已开启蓝牙，当前设备未被其他手机连接</string>
+    <string name="bind">绑定</string>
+    <string name="binding">绑定设备…</string>
+    <string name="not_support_bluetooth">手机不支持蓝牙</string>
+    <string name="bluetooth_not_turned_on">蓝牙未打开,请打开手机蓝牙功能</string>
+    <string name="connection_successfully">设备连接绑定成功</string>
+    <string name="connection_bind_fail">设备连接绑定失败</string>
+    <!--首页提示-->
+    <string name="main_device_no_support">设备不支持该功能</string>
+    <string name="main_unconnected_watch">未连接手表</string>
+    <string name="connected">已连接</string>
+    <string name="connecting">连接中</string>
+    <string name="unbinding">解绑</string>
+    <string name="no_connected">未连接</string>
+    <string name="connect_failed">连接失败</string>
+    <string name="scanning">扫描中</string>
+    <string name="scan_stop">扫描停止</string>
+    <string name="turn_on_location_service">请先打开定位服务</string>
+    <string name="unbind_current_device">确定要解绑当前设备么</string>
+    <string name="tip_allow_permission">请授权必要权限以便APP为您提供更好的服务</string>
+
+    <string name="every">每</string>
+    <string name="every_day">每天</string>
+    <string name="day_uni">天</string>
+    <string name="minute_uni">分钟</string>
+    <string name="hour_uni">小时</string>
+    <string name="minute">分</string>
+    <string name="spe_day">日</string>
+    <string name="spe_week">周</string>
+    <string name="spe_month">月</string>
+    <string name="spe_year">年</string>
+
+    <string name="my_monday">周一</string>
+    <string name="my_tuesday">周二</string>
+    <string name="my_wednesday">周三</string>
+    <string name="my_thursday">周四</string>
+    <string name="my_friday">周五</string>
+    <string name="my_saturday">周六</string>
+    <string name="my_sunday">周日</string>
+
+    <!--首页菜单-->
+    <string name="status_menu">状态</string>
+    <string name="sleep_menu">睡眠</string>
+    <string name="motion_menu">活动</string>
+    <string name="mine_menu">我的</string>
+
+    <!--首页-->
+    <string name="no_equipment">暂无设备</string>
+    <string name="authorize_bluetooth">授权RVigor使用蓝牙</string>
+    <string name="authorize_bluetooth_tip">蓝牙权限未开启，无法连接你的戒指设备，请允许app访问你的蓝牙权限。</string>
+    <string name="open">去开启</string>
+    <string name="cancel">取消</string>
+    <string name="today">今日</string>
+    <string name="yesterday_performance">昨日表现</string>
+    <string name="sort_step_tip">还差%s步达标，约等于走路%s</string>
+    <string name="achieved_step">若已达标，显示太棒了，你已完成今日目标。</string>
+    <string name="mental_health">心理健康</string>
+    <string name="mental_state_assessment">心理状态评估</string>
+    <string name="normal">正常</string>
+    <string name="mild_disorder">轻度失调</string>
+    <string name="serious_obstacle">严重障碍</string>
+    <string name="normal_tip">您具备较好的情绪调节能力和社会适应能力。继续保持健康的生活习惯和积极的心态，定期进行自我评估，及时关注自己的心理状态。</string>
+    <string name="mild_disorder_tip">您可能正在经历一些轻度的心理健康问题，如情绪波动、轻度焦虑或抑郁等。建议及时放松心情，调整心理状态。</string>
+    <string name="serious_obstacle_tip">您可能存在过大的压力、焦虑等症状，严重心理问题会影响身体健康，可寻求专业人员帮助，及时改善心理问题。</string>
+    <string name="stress_expression">压力表现</string>
+    <string name="fatigue_degree">疲劳程度</string>
+    <string name="emotional_state">情绪状态</string>
+    <string name="higher">较高</string>
+    <string name="steady">平稳</string>
+    <string name="heart_rate">心率</string>
+    <string name="times_minute">次/分钟</string>
+    <string name="blood_oxygen">血氧</string>
+
+    <!--表现评级：5个等级
+    极差：0-50分
+    欠佳：51-60
+    一般：61-80
+    不错：81-90
+    优秀：91-100-->
+    <string name="performance_rating">表现评级</string>
+    <string name="performance_rating_1">极差</string>
+    <string name="performance_rating_2">欠佳</string>
+    <string name="performance_rating_3">一般</string>
+    <string name="performance_rating_4">不错</string>
+    <string name="performance_rating_5">优秀</string>
+
+    <string name="performance_remark_1">昨日表现极差，您可能处于高压和高疲劳状态。建议立即调整作息时间，增加休息和运动，若持续不佳，建议寻找健康专家帮助。</string>
+    <string name="performance_remark_2">昨日身心状态欠佳，可能是工作压力或生活习惯所致。请合理安排工作和休息时间，尝试冥想或瑜伽等放松方式。</string>
+    <string name="performance_remark_3">表现一般，您可能需要更加关注自己的身心健康。建议保持良好的作息习惯，增加户外活动和社交互动。</string>
+    <string name="performance_remark_4">表现不错，继续保持这样的健康状态！维持规律的作息和饮食习惯，还可尝试加入一些心理健康练习。</string>
+    <string name="performance_remark_5">表现太棒了，继续保持健康的生活方式，增强您的抗压能力和应对挑战的能力，让您在生活和工作中更加从容和自信。</string>
+
+    <string name="mild">轻度</string>
+    <string name="moderate">中度</string>
+    <string name="severe">重度</string>
+
+    <string name="relax">放松</string>
+    <string name="slight">轻微</string>
+    <string name="high_pressure">高压</string>
+
+    <string name="emotion_downcast">低落</string>
+    <string name="emotion_calmness">平静</string>
+    <string name="emotion_excite">激动</string>
+
+    <!--睡眠-->
+    <string name="sleep">睡眠</string>
+    <string name="sleep_duration">睡眠时长</string>
+    <string name="start_end_time">起止时间</string>
+    <string name="sleep_risks">睡眠风险概览</string>
+    <string name="events">活动</string>
+    <string name="quality_score">质量得分</string>
+
+    <!--我的-->
+    <string name="login_registration">登录/注册</string>
+    <string name="my_equipment">我的设备</string>
+    <string name="my_mac">MAC地址：%s</string>
+    <string name="my_battery">电量%s</string>
+    <string name="my_go_bind">去绑定</string>
+    <string name="my_unbind_device">未绑定设备</string>
+    <string name="set_health_goal">立即设置\n健康目标</string>
+    <string name="set_health_goal_tip">设置你的运动和睡眠目标</string>
+    <string name="go_settings">去设置</string>
+    <string name="health_sharing">健康指标\n一键分享</string>
+    <string name="health_sharing_tip">自定义分享指标报告内容</string>
+    <string name="go_share">去分享</string>
+    <string name="language_setting">语言设置</string>
+    <string name="unit_setting">单位设置</string>
+    <string name="device_upgrade_setting">设备升级</string>
+    <string name="question_setting">常见问题</string>
+    <string name="account_security">账号安全</string>
+    <string name="about">关于RVigor</string>
+    <string name="age">岁</string>
+    <string name="find_device">查找设备</string>
+
+<!--    睡眠风险概览：分析血氧、深睡和静息心率数值，
+    当最低血氧≤94%时，显示疑似呼吸窘迫，当最低血氧≥95%时，显示睡眠呼吸平稳；
+    当深睡时长≤1小时，显示深睡眠严重不足，1-2小时，显示深睡眠待加强；≥2小时，深睡眠充足；
+    静息心率>70，显示静心心率过高，夜间恢复不好；55-70，显示静息心率正常，十分健康。≤55，显示静息心率偏低-->
+    <string name="sleep_low_ox">整晚最低血氧%d,疑似呼吸窘迫</string>
+    <string name="sleep_normal_ox">整晚最低血氧%d, 睡眠呼吸平稳</string>
+    <string name="sleep_low_deep_sleep">深睡眠严重不足</string>
+    <string name="sleep_strength_deep_sleep">深睡眠待加强</string>
+    <string name="sleep_sufficient_deep_sleep">深睡眠充足</string>
+    <string name="sleep_high_heart">静心心率过高，夜间恢复不好</string>
+    <string name="sleep_normal_heart">静息心率正常，十分健康</string>
+    <string name="sleep_low_heart">静息心率偏低</string>
+
+   <!-- 表现评级：5个等级
+    极差：0-50分
+    欠佳：51-60
+    一般：61-80
+    不错：81-90
+    优秀：91-100
+    极差：昨日表现极差，您可能处于高压和高疲劳状态。建议立即调整作息时间，增加休息和运动，若持续不佳，建议寻找健康专家帮助。
+    欠佳：昨日身心状态欠佳，可能是工作压力或生活习惯所致。请合理安排工作和休息时间，尝试冥想或瑜伽等放松方式。
+    一般：表现一般，您可能需要更加关注自己的身心健康。建议保持良好的作息习惯，增加户外活动和社交互动。
+    不错：表现不错，继续保持这样的健康状态！维持规律的作息和饮食习惯，还可尝试加入一些心理健康练习。
+    优秀：表现太棒了，继续保持健康的生活方式，增强您的抗压能力和应对挑战的能力，让您在生活和工作中更加从容和自信。-->
+    <string name="range">极差</string>
+    <string name="poor">欠佳</string>
+    <string name="commonly">一般</string>
+    <string name="not_bad">不错</string>
+    <string name="excellent">优秀</string>
+    <string name="range_tip">昨日表现极差，您可能处于高压和高疲劳状态。建议立即调整作息时间，增加休息和运动，若持续不佳，建议寻找健康专家帮助。</string>
+    <string name="poor_tip">昨日身心状态欠佳，可能是工作压力或生活习惯所致。请合理安排工作和休息时间，尝试冥想或瑜伽等放松方式。</string>
+    <string name="commonly_tip">表现一般，您可能需要更加关注自己的身心健康。建议保持良好的作息习惯，增加户外活动和社交互动。</string>
+    <string name="not_bad_tip">表现不错，继续保持这样的健康状态！维持规律的作息和饮食习惯，还可尝试加入一些心理健康练习。</string>
+    <string name="excellent_tip">表现太棒了，继续保持健康的生活方式，增强您的抗压能力和应对挑战的能力，让您在生活和工作中更加从容和自信。</string>
+
+    <string name="one_day">1日</string>
+    <string name="seven_day">7日</string>
+    <string name="thirty_day">30日</string>
+    <string name="average">平均</string>
+    <string name="average_ox">平均血氧</string>
+    <string name="ox_range">血氧范围</string>
+    <string name="ox_measure">血氧测量</string>
+    <string name="ox_instructions">血氧说明</string>
+    <string name="what_blood_oxygen">什么是血氧饱和度</string>
+    <string name="what_blood_oxygen_tip">血氧，全称为血氧饱和度，是指血液中与氧气结合的血红蛋白占全部血红蛋白的百分比，它反映了人体血液中氧气的含量和供应情况。正常情况下，血氧饱和度的数值应在95%至100%之间，这个范围内的血氧水平可以确保身体各器官和组织获得充足的氧气供应。</string>
+    <string name="blood_oxygen_saturation">如何测量血氧饱和度</string>
+    <string name="blood_oxygen_saturation_tip">1.将其戒指佩戴在中指或无名指上，传感器侧对准指腹位置，app端开启血氧测量，静待数秒即可获得血氧数值。
+2.某些外界因素（纹身、毛发、晃动、佩戴偏斜、低温等）可能影响测量准确性，甚至无法输出结果。
+3.本产品非医疗器械，所提供的数据及建议仅供参考，不可作为临床诊断和治疗依据。</string>
+    <string name="ox_measure_tip">正在检测中，请正确佩戴，保持静止</string>
+    <string name="ox_measure_again">重新测量</string>
+    <string name="ox_measure_fail">测量失败，请确认已正确佩戴设备</string>
+    <string name="ox_measure_fail_tip">1.请将智能戒指电路板侧（内圈带字母图案侧）贴近指腹方向（靠手掌心一侧）佩戴。\n\n2.确保佩戴戒指的手指指腹侧无纹身、污渍等</string>
+
+    <!--心率-->
+    <string name="resting_heart_rate">静息心率</string>
+    <string name="mean_heart_rate">平均心率</string>
+    <string name="max_rate">最高心率</string>
+    <string name="minimum_rate">最低心率</string>
+    <string name="abnormal_heart_rate">异常心率</string>
+    <string name="heart_measure">心率测量</string>
+    <string name="heart_measure_tip">心率检测中，请保持佩戴，等待测量完成</string>
+    <string name="heart_remeasure">重新测量</string>
+
+    <string name="light_sleep">浅睡</string>
+    <string name="deep_sleep">深睡</string>
+    <string name="sober">清醒</string>
+    <string name="fall_asleep">入睡</string>
+    <string name="sleep_rem">快速眼动</string>
+    <string name="light_sleep_view">浅睡眠</string>
+    <string name="deep_sleep_view">深睡眠</string>
+    <string name="sleep_total_len">睡眠总时长</string>
+    <string name="longish">偏长</string>
+    <string name="long_sleep">长睡眠</string>
+    <string name="sleep_efficiency">睡眠效率 %s</string>
+    <string name="siesta_sleep">零星小睡</string>
+    <string name="sleep_breathe_stop">呼吸暂停</string>
+    <string name="breath_index_5">您睡眠呼吸情况良好，请继续保持</string>
+    <string name="breath_index_5_more">您可能存在轻度阻塞性睡眠呼吸暂停</string>
+    <string name="breath_index_15_more">您可能存在中度阻塞性睡眠呼吸暂停</string>
+    <string name="breath_index_30_more">您可能存在重度阻塞性睡眠呼吸暂停</string>
+    <string name="breath_index_no_data">暂无数据，请佩戴手表并开启睡眠血氧监测</string>
+    <string name="apnea_time">呼吸暂停次数（次）</string>
+    <string name="breath_index">低通气指数（次/小时）</string>
+    <string name="oxygen_range">血氧范围</string>
+    <string name="ox_average">平均血氧</string>
+    <string name="oxygen_level">血氧值</string>
+    <string name="proportion">占比</string>
+    <string name="duration">持续时间</string>
+    <string name="sleep_heart_rate">睡眠心率</string>
+    <string name="rate_range">心率范围</string>
+    <string name="respiratory_rate">呼吸频率</string>
+    <string name="mean_respiratory_rate">平均呼吸频率</string>
+    <string name="respiratory_rate_range">呼吸频率范围</string>
+    <string name="comprehensive_evaluation">综合评估</string>
+    <string name="insufficient">不足</string>
+    <string name="slightly_higher">偏高</string>
+    <string name="slightly_low">偏低</string>
+    <string name="time">次</string>
+    <string name="excessive">偏多</string>
+    <string name="empty_sleep_tip">暂无数据，去佩戴智能戒指，了解你的睡眠状态</string>
+    <string name="empty_siesta">暂无小睡</string>
+    <string name="view_fall_sleep">入睡</string>
+    <string name="view_wake">醒来</string>
+
+    <string name="event_overview">活动总览</string>
+    <string name="total_steps_today">今日总步数（步）</string>
+    <string name="calorie_kilocalorie">卡路里（千卡）</string>
+    <string name="distance_km">距离（千米）</string>
+    <string name="step">步</string>
+    <string name="intensity_analysis">活动强度分析</string>
+    <string name="active_time">活跃总时长</string>
+    <string name="to_enhanced">待加强</string>
+    <string name="to_enhanced_tip">世卫组织建议成年人平均每天进行30min中高强度运动，你的运动强度过低，还未达标！</string>
+    <string name="to_enhanced_reach_tip">世卫组织建议成年人平均每天进行30min中高强度运动，你的运动强度已达标！</string>
+    <string name="low_strength">低强度</string>
+    <string name="medial_strength">中强度</string>
+    <string name="high_strength">高强度</string>
+    <string name="standing_length">站立时长</string>
+    <string name="standing_hours">站立小时数</string>
+    <string name="standing_hours_tip">记录您每小时是否有站立行为，当1小时内有一分钟以上的站立且活动行为，则记录为站立1小时，长期久坐会增加心脑血管、肥胖、抑郁、糖尿病、肠胃疾病等风险，建议每小时至少起来活动1分钟，避免长期久坐。</string>
+    <string name="exercise_history">锻炼历史</string>
+    <string name="exercises_number">锻炼总次数</string>
+    <string name="exercises_duration">锻炼时长</string>
+    <string name="burn_calories">消耗卡路里</string>
+    <string name="do_exercise">去运动</string>
+    <string name="email_login">邮箱登录</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="privacy_policy">隐私政策</string>
+
+    <string name="pressure_analysis">压力分析</string>
+    <string name="mean_pressure">平均压力</string>
+    <string name="extremely_high">极高</string>
+    <string name="pressure_relax_tip">整体压力状态较为放松，保持现状，继续享受当前状态，适时参与活动，丰富生活。</string>
+    <string name="pressure_mild_tip">您可能面临轻度压力，注意及时调整心态，保持积极，维持身心平衡，同时接受小挑战，不断锻炼自己调节压力的能力。</string>
+    <string name="pressure_higher_tip">您当前可能正经历着较高的压力，建议您深入分析压力来源，制定有效的应对策略。在保持积极心态的同时，更要注重身心的休息和恢复，如定期锻炼、保证充足睡眠。必要时，可寻求朋友、家人或专业人士的支持与帮助，共同面对挑战。</string>
+    <string name="pressure_extremely_high_tip">您可能感到身心俱疲，甚至影响到日常生活。此时，建议您立即采取行动，寻求专业心理咨询或治疗，以应对并减轻压力。同时，保持与亲朋好友的沟通，分享您的感受和困惑，他们的理解和支持将给您带来莫大的帮助。</string>
+    <string name="pressure_25_tip">0~25 放松</string>
+    <string name="pressure_50_tip">26~50 轻度</string>
+    <string name="pressure_90_tip">51~90 较高</string>
+    <string name="pressure_100_tip">91~100 极高</string>
+
+    <string name="tire_analysis">疲劳分析</string>
+    <string name="mean_tire">平均疲劳度</string>
+    <string name="intermediate">中等</string>
+    <string name="over">过度</string>
+    <string name="tire_normal_tip">您当前处于极佳的状态，精力充沛。继续保持这种良好的生活节奏和作息习惯，让身心保持最佳状态，享受生活的每一刻。</string>
+    <string name="tire_slight_tip">您可能感到轻微的疲劳，这是身体在提醒您需要休息。轻微疲劳是身体在应对日常活动后的自然反应。适当休息、合理饮食和规律作息，即可帮助身体快速恢复。</string>
+    <string name="tire_intermediate_tip">当前您可能正经历中等程度的疲劳，建议暂时减轻工作或学习负担，多进行放松活动，如深呼吸、瑜伽或散步。可适当增加睡眠时长或小睡，保证睡眠质量，有助于恢复精力。</string>
+    <string name="tire_excessive_tip">过度疲劳会严重影响您的身心健康，建议您立即停止当前活动，充分休息，并寻求医生或专业人士的帮助。不要忽视身体的警告，及时采取措施恢复健康。</string>
+    <string name="tire_25_tip">0~25 正常</string>
+    <string name="tire_50_tip">26~50 轻微</string>
+    <string name="tire_90_tip">51~90 中等</string>
+    <string name="tire_100_tip">91~100 过度</string>
+
+    <string name="emotion_analysis">情绪分析</string>
+    <string name="emotion_status">情绪状态</string>
+    <string name="passive">消极</string>
+    <string name="vigorous">积极</string>
+    <string name="emotion_passive_tip">您可能正经历着消极的情绪，感到有些压力和不安。请注意调整自己的心态，尝试寻找问题的根源，并寻找合适的解决方法。保持积极的心态，给自己一些时间和空间去调整，同时也要记得维持身心的平衡，不要过度压抑自己。</string>
+    <string name="emotion_steady_tip">您的情绪整体表现较为平稳，这是面对各种挑战时的重要心态。继续保持这种平衡，不要让外界的变化和干扰打乱您的内心。同时，也要敢于接受生活中的小挑战，锻炼自己调节情绪的能力，让自己更加坚韧和自信。</string>
+    <string name="emotion_vigorous_tip">您的情绪表现积极，总是充满了动力和活力。继续保持这种积极向上的心态，迎接生活中的每一个挑战，有助于不断锻炼自己，在面临挑战时更容易克服困难。</string>
+
+
+</resources>

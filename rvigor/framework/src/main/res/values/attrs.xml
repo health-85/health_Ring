@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义流式ViewGroup的属性-->
+    <declare-styleable name="FlowRadioGroup">
+        <!--横向间距-->
+        <attr name="horizontalPadding" format="dimension" />
+        <!--纵向间距-->
+        <attr name="verticalPadding" format="dimension" />
+    </declare-styleable>
+</resources>

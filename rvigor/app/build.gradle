@@ -1,0 +1,179 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.greenrobot.greendao'
+}
+
+def Environment = 1//环境，1表示测试环境，2表示生产
+
+android {
+    namespace 'com.healthy.rvigor'
+    compileSdk rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdk rootProject.ext.android.minSdkVersion
+        targetSdk rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("int", "Environment", "${Environment}")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField("int", "Environment", "${Environment}")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName = ""
+            def date = new Date()
+            def formattedDate = date.format('yyyyMMdd')
+            if (variant.buildType.name.equals('release')) {
+                fileName = "rvigor_${variant.mergedFlavor.versionName}_${variant.mergedFlavor.versionCode}_${formattedDate}.apk"
+                outputFileName = fileName
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+//project.afterEvaluate{
+//    getTasksByName("compileDebugKotlin",false).each {
+//        it.mustRunAfter("greendao")
+////        it.dependsOn("greendao")
+//    }
+//}
+
+greendao {
+    // 数据库版本号
+    schemaVersion 1
+    // 生成数据库文件的目录
+    targetGenDir 'src/main/java'
+    // 生成的数据库相关文件的包名
+    daoPackage 'com.healthy.rvigor.greendao.gen'
+}
+
+//tasks.whenTaskAdded { task ->
+//    if (task.name.matches("compile\w*Kotlin")) {
+//        task.dependsOn('greendao')
+//    }
+//}
+
+tasks.configureEach { task ->
+    if (task.name.matches("\\w*compile\\w*Kotlin")) {
+        task.dependsOn('greendao')
+    }
+    if (task.name.matches("\\w*kaptGenerateStubs\\w*Kotlin")) {
+        task.dependsOn('greendao')
+    }
+
+    if (task.name.matches("\\w*kapt\\w*Kotlin")) {
+        task.dependsOn('greendao')
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //greendao
+    implementation rootProject.ext.dependencies["greendao"]
+    //BaseRecyclerViewAdapterHelper4
+    implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    //okhttp
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+    //retrofit
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["retrofit-converter-gson"]
+//    implementation rootProject.ext.dependencies["retrofit2-rxjava2-adapter"]
+    //rxjava2
+    implementation rootProject.ext.dependencies["rxjava3"]
+    implementation rootProject.ext.dependencies["rxjava3-rxandroid"]
+    //multidex
+    implementation rootProject.ext.dependencies["multidex"]
+    // Immersionbar基础依赖包，必须要依赖
+    implementation rootProject.ext.dependencies["immersionbar"]
+    // kotlin扩展（可选）
+    implementation rootProject.ext.dependencies["immersionbar-ktx"]
+    //eventbus
+    implementation rootProject.ext.dependencies["eventbus"]
+    //fastjson
+    implementation rootProject.ext.dependencies["fastjson"]
+    //flexbox
+    implementation rootProject.ext.dependencies["flexbox"]
+    //ZhangTeng-util
+    implementation rootProject.ext.dependencies["ZhangTeng-util"]
+    //CircleImageview
+    implementation rootProject.ext.dependencies["circleimageview"]
+    // PictureSelector 基础 (必须)
+    implementation rootProject.ext.dependencies["pictureselector"]
+    // 自定义相机 (按需引入)
+    implementation rootProject.ext.dependencies["camerax"]
+    //阿里Oos
+    implementation rootProject.ext.dependencies["oos"]
+    //扫描
+    implementation rootProject.ext.dependencies["scanner"]
+    //渐变TextView
+    implementation rootProject.ext.dependencies["GradientTextView"]
+    //switchbutton
+    implementation rootProject.ext.dependencies["switchbutton"]
+    //wheelview
+//    implementation rootProject.ext.dependencies["wheelview"]
+    //pickerview
+    implementation rootProject.ext.dependencies["pickerview"]
+    //MagicIndicator
+    implementation rootProject.ext.dependencies["MagicIndicator"]
+    //SmartViewPager2Adapter
+    implementation rootProject.ext.dependencies["SmartViewPager2Adapter"]
+    //banner
+    implementation rootProject.ext.dependencies["banner"]
+    //日历
+//    implementation 'com.haibin:calendarview:3.7.1'
+    //GalleryLayoutManager
+//    implementation 'github.hellocsl:GalleryLayoutManager:1.0.6'
+    implementation rootProject.ext.dependencies["haibinCalendarview"]
+    //Bugly
+    implementation rootProject.ext.dependencies["Bugly"]
+    //permissionx
+    implementation rootProject.ext.dependencies["guolindev-permissionx"]
+
+    //framework
+    implementation project(path: ':framework')
+
+    //手表SDK
+//    implementation files('libs/sdk_sat_1.0.2.aar')
+    implementation files('libs/sdk_sat_ac_1.1.3.aar')
+//    implementation files('libs/sdk_sat_ab_1.0.2.aar')
+//    implementation files('libs/sdk_sat_1.0.0.aar')
+}

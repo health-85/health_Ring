@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_mind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_mind_bg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@mipmap/ic_mild_disorder"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mind_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="29dp"
+                android:text="@string/mental_state_assessment"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mind_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/normal"
+                android:textColor="#ffffffff"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_mind_tip"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mind_tip" />
+
+            <TextView
+                android:id="@+id/tv_mind_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="130dp"
+                android:paddingBottom="20dp"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mind_status"
+                tools:text="您可能正经历着消极的情绪，感到有些压力和不安。请注意调整自己的心态，尝试寻找问题的根源，并寻找合适的解决方法。保持积极的心态，给自己一些时间和空间去调整，同时也要记得维持身心的平衡，不要过度压抑自己。" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_pressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:visibility="visible"
+            android:background="@drawable/main_item_bg"
+            app:layout_constraintTop_toBottomOf="@+id/cl_mind">
+
+            <TextView
+                android:id="@+id/tv_pressure_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/pressure_analysis"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mean_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/mean_pressure"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_pressure_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pressure_analysis" />
+
+            <TextView
+                android:id="@+id/tv_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#ffffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_pressure_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mean_pressure" />
+
+            <TextView
+                android:id="@+id/tv_pressure_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text=""
+                android:textColor="#ffff8751"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_pressure"
+                app:layout_constraintStart_toEndOf="@+id/tv_pressure" />
+
+            <TextView
+                android:id="@+id/tv_pressure_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pressure"
+                tools:text="长期承受高压状态会导致身心疲惫，出现焦虑、抑郁等情绪问题，还可能影响免疫系统，增加患病风险。保持良好的生活习惯并学会调整心态，保持积极乐观的态度，通过冥想、深呼吸等方式来放松身心。" />
+
+            <com.healthy.rvigor.view.MindView
+                android:id="@+id/pressure_view"
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                android:layout_marginTop="4dp"
+                app:dataBarWidth="4dp"
+                app:dataStyle="bar"
+                app:dataBarColor="#435cb5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pressure_msg" />
+
+            <TextView
+                android:id="@+id/tv_pressure_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingBottom="10dp"
+                android:text="@string/pressure_25_tip"
+                android:textColor="#ff7c7d8c"
+                android:layout_marginStart="15dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_pressure_50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pressure_view" />
+
+            <TextView
+                android:id="@+id/tv_pressure_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/pressure_50_tip"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_pressure_90"
+                app:layout_constraintStart_toEndOf="@+id/tv_pressure_25"
+                app:layout_constraintTop_toBottomOf="@+id/pressure_view" />
+
+            <TextView
+                android:id="@+id/tv_pressure_90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/pressure_90_tip"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_pressure_100"
+                app:layout_constraintStart_toEndOf="@+id/tv_pressure_50"
+                app:layout_constraintTop_toBottomOf="@+id/pressure_view" />
+
+            <TextView
+                android:id="@+id/tv_pressure_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/pressure_100_tip"
+                android:layout_marginEnd="15dp"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_pressure_90"
+                app:layout_constraintTop_toBottomOf="@+id/pressure_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_tire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/main_item_bg"
+            app:layout_constraintTop_toBottomOf="@+id/cl_pressure">
+
+            <TextView
+                android:id="@+id/tv_tire_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/tire_analysis"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mean_tire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/mean_tire"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_tire_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tire_analysis" />
+
+            <TextView
+                android:id="@+id/tv_tire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#ffffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_tire_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mean_tire" />
+
+            <TextView
+                android:id="@+id/tv_tire_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text=""
+                android:textColor="#ffff8751"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tire"
+                app:layout_constraintStart_toEndOf="@+id/tv_tire" />
+
+            <TextView
+                android:id="@+id/tv_tire_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tire"
+                tools:text="长期承受高压状态会导致身心疲惫，出现焦虑、抑郁等情绪问题，还可能影响免疫系统，增加患病风险。保持良好的生活习惯并学会调整心态，保持积极乐观的态度，通过冥想、深呼吸等方式来放松身心。" />
+
+            <com.healthy.rvigor.view.MindView
+                android:id="@+id/tire_view"
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                android:layout_marginTop="4dp"
+                app:dataBarWidth="4dp"
+                app:dataStyle="cub_line"
+                app:dataLineColor="#802CC9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tire_msg" />
+
+            <TextView
+                android:id="@+id/tv_tire_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/tire_25_tip"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_tire_50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tire_view" />
+
+            <TextView
+                android:id="@+id/tv_tire_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/tire_50_tip"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_tire_90"
+                app:layout_constraintStart_toEndOf="@+id/tv_tire_25"
+                app:layout_constraintTop_toBottomOf="@+id/tire_view" />
+
+            <TextView
+                android:id="@+id/tv_tire_90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/tire_90_tip"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_tire_100"
+                app:layout_constraintStart_toEndOf="@+id/tv_tire_50"
+                app:layout_constraintTop_toBottomOf="@+id/tire_view" />
+
+            <TextView
+                android:id="@+id/tv_tire_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/tire_100_tip"
+                android:layout_marginEnd="15dp"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_tire_90"
+                app:layout_constraintTop_toBottomOf="@+id/tire_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_emotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/main_item_bg"
+            app:layout_constraintTop_toBottomOf="@+id/cl_tire">
+
+            <TextView
+                android:id="@+id/tv_emotion_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/emotion_analysis"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mean_emotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/emotion_status"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_emotion_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_emotion_analysis" />
+
+            <TextView
+                android:id="@+id/tv_emotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#ffffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_emotion_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mean_emotion" />
+
+            <TextView
+                android:id="@+id/tv_emotion_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text=""
+                android:textColor="#ffff8751"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_emotion"
+                app:layout_constraintStart_toEndOf="@+id/tv_emotion" />
+
+            <TextView
+                android:id="@+id/tv_emotion_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_emotion"
+                tools:text="长期承受高压状态会导致身心疲惫，出现焦虑、抑郁等情绪问题，还可能影响免疫系统，增加患病风险。保持良好的生活习惯并学会调整心态，保持积极乐观的态度，通过冥想、深呼吸等方式来放松身心。" />
+
+            <com.healthy.rvigor.view.EmotionView
+                android:id="@+id/emotion_view"
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                android:layout_marginTop="4dp"
+                app:dataBarWidth="4dp"
+                app:dataStyle="cub_line"
+                app:dataLineColor="#D12C86"
+                android:paddingBottom="18dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_emotion_msg"
+                tools:layout_editor_absoluteX="15dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.healthy.rvigor.view.CusToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_title="@string/blood_oxygen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:right_img="@drawable/svg_detail" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <RadioGroup
+                android:id="@+id/rg_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rbt_one_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal|center"
+                    android:text="@string/one_day"
+                    android:textColor="@drawable/selector_status_menu"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/rbt_7_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal|center"
+                    android:text="@string/seven_day"
+                    android:textColor="@drawable/selector_status_menu"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/rbt_30_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal|center"
+                    android:text="@string/thirty_day"
+                    android:textColor="@drawable/selector_status_menu"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </RadioGroup>
+
+            <com.healthy.rvigor.view.SpecDateSelectedView
+                android:id="@+id/spec_date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                app:timeRightImg="@drawable/svg_day_down"
+                tools:text="2024/1/24" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_tabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_ox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_average_uni"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="2dp"
+                            android:text="@string/average"
+                            android:textColor="#ff7c7d8c"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_ox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:includeFontPadding="false"
+                            android:text="--"
+                            android:textColor="#ffffffff"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="2dp"
+                            android:text="%"
+                            android:textColor="#ff7c7d8c"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:includeFontPadding="false"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_ox"
+                        tools:text="11:55" />
+
+                    <com.healthy.rvigor.view.OxDataView
+                        android:id="@+id/ox_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="162dp"
+                        app:dataBarWidth="4dp"
+                        app:dataStyle="bar"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_100"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:src="#6DFFE9"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_100"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_100"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ox_view"
+                        app:layout_constraintTop_toTopOf="@+id/tv_100" />
+
+                    <TextView
+                        android:id="@+id/tv_100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="90-100%"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/img_89"
+                        app:layout_constraintStart_toEndOf="@+id/img_100"
+                        app:layout_constraintTop_toBottomOf="@+id/ox_view" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_89"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginStart="30dp"
+                        android:src="#FFC049"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_100"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_89"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@+id/tv_100"
+                        app:layout_constraintTop_toBottomOf="@+id/ox_view"
+                        app:layout_constraintTop_toTopOf="@+id/tv_100" />
+
+                    <TextView
+                        android:id="@+id/tv_89"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="70-89%"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_100"
+                        app:layout_constraintEnd_toStartOf="@+id/img_70"
+                        app:layout_constraintStart_toEndOf="@+id/img_89"
+                        app:layout_constraintTop_toTopOf="@+id/tv_100" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_70"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginStart="30dp"
+                        android:src="#BF3131"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_100"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_70"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@+id/tv_89"
+                        app:layout_constraintTop_toBottomOf="@+id/ox_view"
+                        app:layout_constraintTop_toTopOf="@+id/tv_100" />
+
+                    <TextView
+                        android:id="@+id/tv_70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="&#060;70%"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_70"
+                        app:layout_constraintTop_toTopOf="@+id/tv_100" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.healthy.rvigor.view.RectDataView
+                    android:id="@+id/rect_data_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cl_tabel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="11dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_item_bg"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_average_ox_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/svg_average"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/average_ox"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_average_ox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="--"
+                        android:textColor="#ffffffff"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_ox_uni"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_average_ox_title" />
+
+                    <TextView
+                        android:id="@+id/tv_ox_uni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="%"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_average_ox"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_average_ox" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_item_bg"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_range_ox_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/svg_ox_range"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/ox_range"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_range_ox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="--"
+                        android:textColor="#ffffffff"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_range_ox_uni"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_range_ox_title" />
+
+                    <TextView
+                        android:id="@+id/tv_range_ox_uni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="%"
+                        android:textColor="#ff7c7d8c"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_range_ox"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_range_ox" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_spo_measure"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/shape_login_bg"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/ox_measure"
+                android:textColor="#ff000000"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_my"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/svg_man"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_login_register"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingStart="11dp"
+            android:text="@string/login_registration"
+            android:textColor="#ffffffff"
+            android:textSize="24sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/img_my"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_my"
+            app:layout_constraintTop_toTopOf="@+id/img_my" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_user_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/img_my"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_my"
+            app:layout_constraintTop_toTopOf="@+id/img_my">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="10dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#ffffffff"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/img_right"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Jenney Gray" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_my_age"
+                android:drawableLeft="@drawable/svg_male"
+                android:drawablePadding="2dp"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:text="28岁" />
+
+            <ImageView
+                android:id="@+id/img_right"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/svg_circle_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_my_device"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/img_my">
+
+            <com.flyjingfish.gradienttextviewlib.GradientTextView
+                android:id="@+id/tv_my_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:text="@string/my_equipment"
+                android:textColor="#ff6dffe9"
+                android:textSize="18sp"
+                app:gradient_angle="0"
+                app:gradient_endColor="#6DFFE9"
+                app:gradient_startColor="#A2F8AD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_ring"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_ring"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_device_msg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="22dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/img_ring"
+                app:layout_constraintStart_toStartOf="@id/tv_my_device"
+                app:layout_constraintTop_toBottomOf="@+id/tv_my_device">
+
+                <TextView
+                    android:id="@+id/tv_device_name"
+                    android:layout_width="wrap_content"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:includeFontPadding="false"
+                    android:textColor="#ffffffff"
+                    android:textSize="24sp"
+                    android:gravity="center_vertical"
+                    android:maxWidth="150dp"
+                    app:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeMaxTextSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BIO-RING-4160" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_device_status"
+                    android:includeFontPadding="false"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="8dp"
+                    android:text="连接中"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_device_name"
+                    app:layout_constraintStart_toEndOf="@+id/tv_device_name"
+                    app:layout_constraintTop_toTopOf="@+id/tv_device_name" />
+
+                <TextView
+                    android:id="@+id/tv_device_mac"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/my_mac"
+                    android:textColor="#ff5aadb5"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_device_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_device_name" />
+
+                <com.healthy.rvigor.view.BatteryView
+                    android:id="@+id/img_battery_bar"
+                    android:layout_width="94dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_battery"
+                    app:layout_constraintStart_toStartOf="@+id/tv_device_name"
+                    app:layout_constraintTop_toTopOf="@+id/tv_battery" />
+
+                <TextView
+                    android:id="@+id/tv_battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/my_battery"
+                    android:textColor="#ff5aadb5"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/img_battery_bar"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_device_mac" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_no_device"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingBottom="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/img_ring"
+                app:layout_constraintStart_toStartOf="@id/tv_my_device"
+                app:layout_constraintTop_toBottomOf="@+id/tv_my_device">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/my_unbind_device"
+                    android:textColor="#ffffffff"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_connect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_go_bind"
+                    android:gravity="center"
+                    android:paddingStart="29dp"
+                    android:paddingEnd="29dp"
+                    android:text="@string/my_go_bind"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_target"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="11dp"
+            android:background="@drawable/main_item_bg"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/cl_share"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_device">
+
+            <TextView
+                android:id="@+id/tv_health_goal_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="2"
+                android:text="@string/set_health_goal"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/img_goal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_health_goal_tip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/set_health_goal_tip"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/img_goal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_health_goal_title" />
+
+            <ImageView
+                android:id="@+id/img_goal"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_health_goal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_health_goal_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_setting"
+                android:gravity="center"
+                android:text="@string/go_settings"
+                android:textColor="#ff6dffe9"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_health_goal_tip" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/main_item_bg"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cl_target"
+            app:layout_constraintTop_toBottomOf="@+id/cl_device">
+
+            <TextView
+                android:id="@+id/tv_health_sharing_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="2"
+                android:text="@string/health_sharing"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/img_share"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_health_sharing_tip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/health_sharing_tip"
+                android:textColor="#ff7c7d8c"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/img_share"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_health_sharing_title" />
+
+            <ImageView
+                android:id="@+id/img_share"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/ic_my_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_health_sharing_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_setting"
+                android:gravity="center"
+                android:text="@string/go_share"
+                android:textColor="#ff6dffe9"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_health_sharing_tip" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/cl_target">
+
+            <com.healthy.rvigor.view.LabelView
+                android:id="@+id/label_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label_show_left_img="true"
+                app:label_left_img="@drawable/svg_language"
+                app:label_title="@string/find_device" />
+
+            <com.healthy.rvigor.view.LabelView
+                android:id="@+id/label_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label_show_left_img="true"
+                app:label_left_img="@drawable/svg_language"
+                app:label_title="@string/language_setting" />
+
+            <com.healthy.rvigor.view.LabelView
+                android:id="@+id/label_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label_show_left_img="true"
+                app:label_left_img="@drawable/svg_unit"
+                app:label_title="@string/unit_setting" />
+
+            <com.healthy.rvigor.view.LabelView
+                android:id="@+id/label_device_upgrade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label_show_left_img="true"
+                app:label_left_img="@drawable/svg_device_upgrade"
+                app:label_title="@string/device_upgrade_setting" />
+
+            <com.healthy.rvigor.view.LabelView
+                android:id="@+id/label_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label_left_img="@drawable/svg_question"
+                app:label_show_left_img="true"
+                app:label_title="@string/question_setting" />
+
+            <com.healthy.rvigor.view.LabelView
+                android:id="@+id/label_account"
+                android:layout_width="match_parent"
+                app:label_show_left_img="true"
+                android:layout_height="wrap_content"
+                app:label_left_img="@drawable/svg_account"
+                app:label_title="@string/account_security" />
+
+            <com.healthy.rvigor.view.LabelView
+                android:id="@+id/label_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label_show_left_img="true"
+                app:label_left_img="@drawable/svg_about"
+                app:label_title="@string/about" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

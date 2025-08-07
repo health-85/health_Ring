@@ -1,0 +1,41 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android/healthy_project/SdkSatWatch/app/src/main/res/layout/activity_bracelet.xml" value="0.2" />
+        <entry key="..\:/android/healthy_project/SdkSatWatch/app/src/main/res/layout/activity_measurement.xml" value="0.2" />
+        <entry key="..\:/android/healthy_project/SdkSatWatch/app/src/main/res/layout/activity_remin.xml" value="0.2526041666666667" />
+        <entry key="..\:/android/healthy_project/SdkSatWatch/app/src/main/res/layout/activity_set_user_info.xml" value="0.2526041666666667" />
+        <entry key="..\:/android/healthy_project/SdkSatWatch/app/src/main/res/layout/checkitementity_layout.xml" value="0.2526041666666667" />
+        <entry key="..\:/android/healthy_project/SdkSatWatch/app/src/main/res/layout/tixingzhouqidialog_layout.xml" value="0.2526041666666667" />
+        <entry key="..\:/android/project/SdkSatWatch/app/src/main/res/layout/activity_bracelet.xml" value="0.3619791666666667" />
+        <entry key="..\:/android/project/SdkSatWatch/app/src/main/res/layout/activity_upgrade.xml" value="0.3609375" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/drawable/shape_white_10.xml" value="0.1845" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/layout/activity_bracelet.xml" value="0.3619791666666667" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/layout/activity_measurement.xml" value="0.25" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/layout/activity_remin.xml" value="0.3619791666666667" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/layout/activity_scand_device.xml" value="0.3619791666666667" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/layout/dialog_export.xml" value="0.3619791666666667" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/layout/dialog_out.xml" value="0.3609375" />
+        <entry key="..\:/android/project/satwatch/app/src/main/res/layout/listitem_device.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_alarm.xml" value="0.18489583333333334" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_bracelet.xml" value="0.25" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_camera_control.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_measurement.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_notiface.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_remin.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_scand_device.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/activity_splash.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/listitem_alarm.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/listitem_device.xml" value="0.3619791666666667" />
+        <entry key="..\:/project/SdkSatWatch/app/src/main/res/layout/timeselectdialog_layout.xml" value="0.3619791666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

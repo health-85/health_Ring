@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.healthy.rvigor",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1,
+      "versionName": "v1.0.0",
+      "outputFile": "rvigor_v1.0.0_1_20250313.apk"
+    }
+  ],
+  "elementType": "File"
+}

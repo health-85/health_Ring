@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/bg_1a192a_20"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/img_left"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:padding="5dp"
+        android:src="@drawable/svg_left"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_month"
+        app:layout_constraintEnd_toStartOf="@+id/tv_month"
+        app:layout_constraintTop_toTopOf="@+id/tv_month" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:padding="5dp"
+        android:src="@drawable/svg_right"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_month"
+        app:layout_constraintStart_toEndOf="@+id/tv_month"
+        app:layout_constraintTop_toTopOf="@+id/tv_month" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2022年9月" />
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:calendar_height="40dp"
+        app:calendar_padding="10dp"
+        app:current_day_text_color="#ffffff"
+        app:current_month_lunar_text_color="#F1F1F1"
+        app:current_month_text_color="#ffffff"
+        app:day_text_size="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_month"
+        app:min_year="2004"
+        app:month_view="com.healthy.rvigor.view.CustomMultiMonthView"
+        app:month_view_show_mode="mode_only_current"
+        app:other_month_text_color="#8D8D8D"
+        app:scheme_text="假"
+        app:scheme_text_color="#ffffff"
+        app:scheme_theme_color="#ffffff"
+        app:selected_text_color="#fff"
+        app:selected_theme_color="#FE475A"
+        app:week_background="#1A192A"
+        app:week_start_with="mon"
+        app:week_text_color="#ffffff"
+        app:week_view="com.healthy.rvigor.view.CustomMultiWeekView"
+        app:year_view_day_text_color="#ffffff"
+        app:year_view_day_text_size="9sp"
+        app:year_view_month_text_color="#ffffff"
+        app:year_view_month_text_size="12sp"
+        app:year_view_scheme_color="#FE475A" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

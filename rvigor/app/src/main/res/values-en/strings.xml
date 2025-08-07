@@ -1,0 +1,350 @@
+<resources>
+    <string name="app_name">RVigor</string>
+
+    <string name="loading">Loading...</string>
+    <string name="no_data">No data</string>
+    <string name="sure">OK</string>
+    <string name="notification_not_open">The app notification icon is not open! Should I open it?</string>
+    <string name="correct">Yes</string>
+    <string name="deny">No</string>
+
+    <!--登录-->
+    <string name="login_phone_tip">A new account will be created automatically after the unregistered mobile phone number is verified</string>
+    <string name="please_enter_phone">Please enter your phone number</string>
+    <string name="login">Login</string>
+    <string name="login_policy">I have read and agree to the User Agreement and Privacy Policy</string>
+    <string name="tourist_mode">Tourist</string>
+    <string name="agree_policy">Please agree to the Privacy Agreement and Terms of Service</string>
+    <string name="phone_number_11">Please enter the 11-digit phone number</string>
+    <string name="login_expired">Login has expired, please login again</string>
+
+    <!--个人信息-->
+    <string name="user_msg_title">Hi， Fill in your personal information</string>
+    <string name="user_msg_tip">Personal information is only used for local personalized calculation of health indicators such as calorie consumption and exercise heart rate range analysis. We respect your privacy and data security, so there is no need to worry about information leakage</string>
+    <string name="nickname">Nickname</string>
+    <string name="input_nickname">Enter a nickname</string>
+    <string name="enter">Please enter</string>
+    <string name="sex">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Women</string>
+    <string name="birthday">Birthday</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="verify">Confirm</string>
+    <string name="skip">Skip</string>
+    <string name="please_select">Please select</string>
+    <string name="personal_data">Personal data</string>
+    <string name="secrecy">Confidentiality</string>
+
+    <!--扫描设备-->
+    <string name="scan_device">Add Device</string>
+    <string name="scan_device_tip">Connect the ring to the charging case, activate the ring and approach the phone to ensure Bluetooth is turned on</string>
+    <string name="scan_device_not_found">No device found</string>
+    <string name="scan_device_reason">You can investigate the cause and search again in the following way</string>
+    <string name="scan_device_reason_tip">1. The device is not nearby, please bring it closer to your phone
+2. The device has run out of battery. Please connect the device to a charger and make sure it has power before searching
+3. The phone does not have Bluetooth enabled. Please turn on Bluetooth and search again
+4. The device is already connected to the Bluetooth system of the mobile phone. Please ignore the device and search again</string>
+    <string name="scan_research">Search again</string>
+    <string name="scanning_device">Searching devices…</string>
+    <string name="scanning_device_tip">Ensure that Bluetooth is enabled on the phone and that the current device is not connected to another phone</string>
+    <string name="bind">Bind</string>
+    <string name="binding">Binding devices…</string>
+    <string name="not_support_bluetooth">The phone does not support Bluetooth</string>
+    <string name="bluetooth_not_turned_on">Bluetooth not turned on, please turn on your phone\'s Bluetooth function</string>
+    <string name="connection_successfully">Device connection binding successful</string>
+    <string name="connection_bind_fail">Device connection binding failed</string>
+
+    <!--首页提示-->
+    <string name="main_device_no_support">The device does not support this function</string>
+    <string name="main_unconnected_watch">Unconnected watch</string>
+    <string name="connected">Connect</string>
+    <string name="connecting">Connecting</string>
+    <string name="unbinding">Unbind</string>
+    <string name="no_connected">Not connected</string>
+    <string name="connect_failed">Connect failed</string>
+    <string name="scanning">Scanning</string>
+    <string name="scan_stop">Scan stop</string>
+    <string name="turn_on_location_service">Please turn on location service first</string>
+    <string name="unbind_current_device">Are you sure you want to  the current device</string>
+    <string name="tip_allow_permission">Please grant the necessary permissions so that the APP can provide you with better services</string>
+
+    <string name="every">Every</string>
+    <string name="every_day">Every day</string>
+    <string name="day_uni">day</string>
+    <string name="minute_uni">min</string>
+    <string name="hour_uni">h</string>
+    <string name="minute">min</string>
+    <string name="spe_day">Day</string>
+    <string name="spe_week">Week</string>
+    <string name="spe_month">Mon</string>
+    <string name="spe_year">Year</string>
+
+    <string name="my_monday">Mon</string>
+    <string name="my_tuesday">Tue</string>
+    <string name="my_wednesday">Wed</string>
+    <string name="my_thursday">Thu</string>
+    <string name="my_friday">Fri</string>
+    <string name="my_saturday">Sat</string>
+    <string name="my_sunday">Sun</string>
+
+    <!--首页菜单-->
+    <string name="status_menu">State</string>
+    <string name="sleep_menu">Sleep</string>
+    <string name="motion_menu">Motion</string>
+    <string name="mine_menu">Mine</string>
+
+    <!--首页-->
+    <string name="no_equipment">No equipment available at the moment</string>
+    <string name="authorize_bluetooth">Authorize RVigor to use Bluetooth</string>
+    <string name="authorize_bluetooth_tip">Bluetooth permission is not enabled and cannot connect to your ring device. Please allow the app to access your Bluetooth permission.</string>
+    <string name="open">Go to open</string>
+    <string name="cancel">Cancel</string>
+    <string name="today">Today</string>
+    <string name="yesterday_performance">Yesterday\'s performance</string>
+    <string name="sort_step_tip">We still need %s steps to meet the standard, which is approximately equivalent to walking %s</string>
+    <string name="achieved_step">If you have met the standards, it shows great. You have achieved today\'s goal</string>
+    <string name="mental_health">Mental Health</string>
+    <string name="mental_state_assessment">Psychological state</string>
+    <string name="normal">Normal</string>
+    <string name="mild_disorder">Mild disorders</string>
+    <string name="serious_obstacle">Serious obstacles</string>
+    <string name="normal_tip">You have good emotional regulation and social adaptability. Continue to maintain healthy lifestyle habits and a positive mindset, conduct regular self-assessment, and pay timely attention to your psychological state</string>
+    <string name="mild_disorder_tip">You may be experiencing some mild mental health issues, such as emotional fluctuations, mild anxiety, or depression. Suggest timely relaxation of mood and adjustment of psychological state</string>
+    <string name="serious_obstacle_tip">You may have symptoms such as excessive stress and anxiety, and serious psychological problems can affect your physical health. You can seek professional help to improve your psychological problems in a timely manner</string>
+    <string name="stress_expression">Stress</string>
+    <string name="fatigue_degree">Fatigue</string>
+    <string name="emotional_state">Emotional</string>
+    <string name="higher">Higher</string>
+    <string name="steady">Stable</string>
+    <string name="heart_rate">HR</string>
+    <string name="times_minute">bpm</string>
+    <string name="blood_oxygen">SpO2</string>
+
+    <!--表现评级：5个等级
+    极差：0-50分
+    欠佳：51-60
+    一般：61-80
+    不错：81-90
+    优秀：91-100-->
+    <string name="performance_rating">Performance rating</string>
+    <string name="performance_rating_1">Range</string>
+    <string name="performance_rating_2">Poor</string>
+    <string name="performance_rating_3">Commonly</string>
+    <string name="performance_rating_4">Not bad</string>
+    <string name="performance_rating_5">Excellent</string>
+
+    <string name="performance_remark_1">Yesterday\'s performance was extremely poor, and you may be in a state of high pressure and high fatigue. It is recommended to immediately adjust your daily routine, increase rest and exercise. If it persists poorly, it is recommended to seek help from a health expert.</string>
+    <string name="performance_remark_2">Yesterday\'s poor physical and mental state may be due to work pressure or lifestyle habits. Please arrange your work and rest time reasonably, and try relaxation methods such as meditation or yoga.</string>
+    <string name="performance_remark_3">If your performance is average, you may need to pay more attention to your physical and mental health. It is recommended to maintain good daily habits, increase outdoor activities and social interaction.</string>
+    <string name="performance_remark_4">Good performance, continue to maintain this healthy state! Maintain regular daily routines and dietary habits, and also try incorporating some mental health exercises.</string>
+    <string name="performance_remark_5">Your performance is amazing. Continue to maintain a healthy lifestyle, enhance your stress resistance and ability to cope with challenges, and make you more calm and confident in life and work.</string>
+
+    <string name="mild">Mild</string>
+    <string name="moderate">Moderate</string>
+    <string name="severe">Severe</string>
+
+    <string name="relax">Relax</string>
+    <string name="slight">Mild</string>
+    <string name="high_pressure">Severe</string>
+
+    <string name="emotion_downcast">Downcast</string>
+    <string name="emotion_calmness">Calmness</string>
+    <string name="emotion_excite">Excite</string>
+
+    <!--睡眠-->
+    <string name="sleep">Sleep</string>
+    <string name="sleep_duration">Time asleep</string>
+    <string name="start_end_time">Starting and ending time</string>
+    <string name="sleep_risks">Sleep Risk Overview</string>
+    <string name="events">Activity</string>
+    <string name="quality_score">Score</string>
+
+    <!--我的-->
+    <string name="login_registration">Login/Registration</string>
+    <string name="my_equipment">My device</string>
+    <string name="my_mac">MAC：%s</string>
+    <string name="my_battery">Ele %s</string>
+    <string name="my_go_bind">Connect</string>
+    <string name="my_unbind_device">Device not connected</string>
+    <string name="set_health_goal">Set up\n Health goals</string>
+    <string name="set_health_goal_tip">Set your exercise and sleep goals</string>
+    <string name="go_settings">Go set up</string>
+    <string name="health_sharing">Health indicators\n sharing</string>
+    <string name="health_sharing_tip">Customized sharing of indicator report content</string>
+    <string name="go_share">Go share</string>
+    <string name="language_setting">Language settings</string>
+    <string name="unit_setting">Unit Settings</string>
+    <string name="device_upgrade_setting">Equipment upgrade</string>
+    <string name="question_setting">Frequently asked questions</string>
+    <string name="account_security">Account security</string>
+    <string name="about">About RVigor</string>
+    <string name="age">Age</string>
+    <string name="find_device">Find devices</string>
+
+    <!--    睡眠风险概览：分析血氧、深睡和静息心率数值，
+        当最低血氧≤94%时，显示疑似呼吸窘迫，当最低血氧≥95%时，显示睡眠呼吸平稳；
+        当深睡时长≤1小时，显示深睡眠严重不足，1-2小时，显示深睡眠待加强；≥2小时，深睡眠充足；
+        静息心率>70，显示静心心率过高，夜间恢复不好；55-70，显示静息心率正常，十分健康。≤55，显示静息心率偏低-->
+    <string name="sleep_low_ox">The lowest blood oxygen level throughout the night is %d, suspected of respiratory distress</string>
+    <string name="sleep_normal_ox">The lowest blood oxygen level throughout the night is %d, and sleep breathing is stable</string>
+    <string name="sleep_low_deep_sleep">Severe lack of deep sleep</string>
+    <string name="sleep_strength_deep_sleep">Deep sleep needs to be strengthened</string>
+    <string name="sleep_sufficient_deep_sleep">Get plenty of deep sleep</string>
+    <string name="sleep_high_heart">Quiet heart rate too high, poor recovery at night</string>
+    <string name="sleep_normal_heart">Resting heart rate is normal and very healthy</string>
+    <string name="sleep_low_heart">Low resting heart rate</string>
+
+    <!-- 表现评级：5个等级
+     极差：0-50分
+     欠佳：51-60
+     一般：61-80
+     不错：81-90
+     优秀：91-100
+     极差：昨日表现极差，您可能处于高压和高疲劳状态。建议立即调整作息时间，增加休息和运动，若持续不佳，建议寻找健康专家帮助。
+     欠佳：昨日身心状态欠佳，可能是工作压力或生活习惯所致。请合理安排工作和休息时间，尝试冥想或瑜伽等放松方式。
+     一般：表现一般，您可能需要更加关注自己的身心健康。建议保持良好的作息习惯，增加户外活动和社交互动。
+     不错：表现不错，继续保持这样的健康状态！维持规律的作息和饮食习惯，还可尝试加入一些心理健康练习。
+     优秀：表现太棒了，继续保持健康的生活方式，增强您的抗压能力和应对挑战的能力，让您在生活和工作中更加从容和自信。-->
+    <string name="range">Range</string>
+    <string name="poor">Poor</string>
+    <string name="commonly">Commonly</string>
+    <string name="not_bad">Not bad</string>
+    <string name="excellent">Excellent</string>
+    <string name="range_tip"> Yesterday\'s performance was extremely poor, and you may have been under high pressure and high fatigue. It is recommended to immediately adjust your daily routine, increase rest and exercise. If it persists poorly, it is recommended to seek help from a health expert.</string>
+    <string name="poor_tip"> Yesterday\'s poor physical and mental state may be due to work pressure or lifestyle habits. Please arrange your work and rest time reasonably, and try relaxation methods such as meditation or yoga.</string>
+    <string name="commonly_tip"> Performance is average, and you may need to pay more attention to your physical and mental health. It is recommended to maintain good daily habits, increase outdoor activities and social interaction.</string>
+    <string name="not_bad_tip">Performed well, continue to maintain this healthy state! Maintain regular daily routines and dietary habits, and also try incorporating some mental health exercises.</string>
+    <string name="excellent_tip">Excellent performance, continue to maintain a healthy lifestyle, enhance your stress resistance and ability to cope with challenges, making you more calm and confident in life and work.</string>
+
+    <string name="one_day">1 day</string>
+    <string name="seven_day">7 day</string>
+    <string name="thirty_day">30 day</string>
+    <string name="average">Ave</string>
+    <string name="average_ox">Avg SpO2</string>
+    <string name="ox_range">SpO2 Range</string>
+    <string name="ox_measure">SpO2 Measure</string>
+    <string name="ox_instructions">SpO2 description</string>
+    <string name="what_blood_oxygen">What is blood oxygen saturation</string>
+    <string name="what_blood_oxygen_tip">Blood oxygen, also known as blood oxygen saturation, refers to the percentage of hemoglobin in the blood that combines with oxygen to total hemoglobin. It reflects the amount and supply of oxygen in the human blood. Under normal circumstances, the value of blood oxygen saturation should be between 95% and 100%, and the blood oxygen level within this range can ensure that all organs and tissues of the body receive sufficient oxygen supply.</string>
+    <string name="blood_oxygen_saturation">How to measure blood oxygen saturation</string>
+    <string name="blood_oxygen_saturation_tip">  1. Wear the ring on the middle or ring finger, align the sensor side with the fingertip position, activate the blood oxygen measurement on the app, and wait for a few seconds to obtain the blood oxygen value.
+    2. Certain external factors (tattoos, hair, shaking, wearing deviation, low temperature, etc.) may affect measurement accuracy and may even result in inability to output results.
+    3. This product is not a medical device, and the data and recommendations provided are for reference only and cannot be used as a basis for clinical diagnosis and treatment.</string>
+    <string name="ox_measure_tip">Testing in progress, please wear it correctly and keep it stationary</string>
+    <string name="ox_measure_again">Re measure</string>
+    <string name="ox_measure_fail">Measurement failed, please confirm that the device is correctly worn</string>
+    <string name="ox_measure_fail_tip">1. Please wear the smart ring circuit board side (inner circle with letter pattern side) close to your fingertips (palm side). \2. Ensure that the fingertips on which the ring is worn have no tattoos, stains, etc.</string>
+
+    <!--心率-->
+    <string name="resting_heart_rate">RHR</string>
+    <string name="mean_heart_rate">Avg HR</string>
+    <string name="max_rate">Maximum HR</string>
+    <string name="minimum_rate">Minimum HR</string>
+    <string name="abnormal_heart_rate">Abnormal HR</string>
+    <string name="heart_measure">Measure HR</string>
+    <string name="heart_measure_tip">During heart rate monitoring, please keep wearing the device and wait for the measurement to complete.</string>
+    <string name="heart_remeasure">Remeasure</string>
+
+    <string name="light_sleep">Light</string>
+    <string name="deep_sleep">Deep</string>
+    <string name="sober">Wake</string>
+    <string name="fall_asleep">Fall</string>
+    <string name="sleep_rem">Rem</string>
+    <string name="light_sleep_view">Light Sleep</string>
+    <string name="deep_sleep_view">Deep Sleep</string>
+    <string name="sleep_total_len">Sleep duration</string>
+    <string name="longish">Over length</string>
+    <string name="long_sleep">Long sleep</string>
+    <string name="sleep_efficiency">Sleep efficiency %s</string>
+    <string name="siesta_sleep">Naps</string>
+    <string name="sleep_breathe_stop">Apnea</string>
+    <string name="breath_index_5">Your sleep and breathing are good, please continue to maintain</string>
+    <string name="breath_index_5_more">You may have mild obstructive sleep apnea</string>
+    <string name="breath_index_15_more">You may have moderate obstructive sleep apnea</string>
+    <string name="breath_index_30_more">You may have severe obstructive sleep apnea</string>
+    <string name="breath_index_no_data">There is currently no data available. Please wear a watch and turn on sleep oxygen monitoring</string>
+
+    <string name="apnea_time">Apnea times (times)</string>
+    <string name="breath_index">Hypoventilation index (times/hour)</string>
+    <string name="oxygen_range">SpO2 Range</string>
+    <string name="ox_average">Avg SpO2</string>
+    <string name="oxygen_level">SpO2</string>
+    <string name="proportion">Proportion</string>
+    <string name="duration">Duration</string>
+    <string name="sleep_heart_rate"> Sleep HR</string>
+    <string name="rate_range">HR Range</string>
+    <string name="respiratory_rate">Respiratory rate</string>
+    <string name="mean_respiratory_rate">Avg Respiratory Rate</string>
+    <string name="respiratory_rate_range">Respiratory rate range</string>
+    <string name="comprehensive_evaluation">Comprehensive evaluation</string>
+    <string name="insufficient">Insufficient</string>
+    <string name="slightly_higher">High</string>
+    <string name="slightly_low">Low</string>
+    <string name="time">times</string>
+    <string name="excessive">Too many</string>
+    <string name="empty_sleep_tip">There is currently no data available, go wear a smart ring and learn about your sleep status</string>
+    <string name="empty_siesta">No nap available at the moment</string>
+    <string name="view_fall_sleep">Fall</string>
+    <string name="view_wake">Wake up</string>
+
+    <string name="event_overview">Activity Overview</string>
+    <string name="total_steps_today">Total steps (steps)</string>
+    <string name="calorie_kilocalorie">Calories (kcal)</string>
+    <string name="distance_km">Distance</string>
+    <string name="step">Step</string>
+    <string name="intensity_analysis">Activity intensity analysis</string>
+    <string name="active_time">Total active duration</string>
+    <string name="to_enhanced">To be strengthened</string>
+    <string name="to_enhanced_tip">The World Health Organization recommends that adults engage in an average of 30 minutes of moderate to high-intensity exercise per day. Your exercise intensity is too low and not yet up to standard!</string>
+    <string name="to_enhanced_reach_tip">The World Health Organization recommends that adults engage in an average of 30 minutes of moderate to high-intensity exercise per day, and your exercise intensity has reached the standard！</string>
+    <string name="low_strength">Low intensity</string>
+    <string name="medial_strength">Medium strength</string>
+    <string name="high_strength">High intensity</string>
+    <string name="standing_length">Standing duration</string>
+    <string name="standing_hours">Standing hours</string>
+    <string name="standing_hours_tip">Record whether you have standing behavior every hour. If you have standing and activity behavior for more than one minute within one hour, it will be recorded as standing for one hour. Long term sitting will increase the risk of cardiovascular, cerebrovascular, obesity, depression, diabetes, gastrointestinal diseases, etc. It is recommended to get up and exercise for at least one minute every hour to avoid long term sitting.</string>
+    <string name="exercise_history">Exercise History</string>
+    <string name="exercises_number">Total number of workouts</string>
+    <string name="exercises_duration">Exercise duration</string>
+    <string name="burn_calories">Burn calories</string>
+    <string name="do_exercise">Go exercise</string>
+    <string name="email_login">Email login</string>
+    <string name="user_agreement">User Agreement</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="pressure_analysis">Pressure analysis</string>
+    <string name="mean_pressure">Mean pressure</string>
+    <string name="extremely_high">Extremely high</string>
+    <string name="pressure_relax_tip">The overall stress state is relatively relaxed, maintain the status quo, continue to enjoy the current state, timely participation in activities, and enrich life.</string>
+    <string name="pressure_mild_tip">You may face mild stress, pay attention to timely adjustment of mentality, keep positive, maintain physical and mental balance, while accepting small challenges, and constantly exercise their ability to adjust stress.</string>
+    <string name="pressure_higher_tip">You may be experiencing high levels of stress at the moment, so it is recommended that you delve into the sources of stress and develop effective coping strategies. While maintaining a positive attitude, we should pay more attention to physical and mental rest and recovery, such as regular exercise and adequate sleep. When necessary, seek the support and help of friends, family or professionals to face challenges together.</string>
+    <string name="pressure_extremely_high_tip">You may feel physically and mentally exhausted, and it may even affect your daily life. At this point, it is recommended that you take immediate action to seek professional psychological counseling or treatment to cope with and reduce stress. At the same time, keep in touch with friends and family to share your feelings and confusion, their understanding and support will be a great help to you.</string>
+    <string name="pressure_25_tip">0~25 relax</string>
+    <string name="pressure_50_tip">26~50 mild</string>
+    <string name="pressure_90_tip">51~90 higher</string>
+    <string name="pressure_100_tip">91~100 extremely high</string>
+
+    <string name="tire_analysis">Fatigue analysis</string>
+    <string name="mean_tire">Average fatigue</string>
+    <string name="intermediate">intermediate</string>
+    <string name="over">over</string>
+    <string name="tire_normal_tip">You are in excellent condition and full of energy. Continue to maintain this good pace of life and rest habits, so that the body and mind to maintain the best condition, enjoy every moment of life.</string>
+    <string name="tire_slight_tip">You may feel slightly tired, which is your body\'s way of reminding you that you need to rest. Mild fatigue is the body\'s natural response to daily activities. Proper rest, proper diet and regular rest can help the body recover quickly.</string>
+    <string name="tire_intermediate_tip">You may be experiencing moderate levels of fatigue at the moment, so it is recommended to temporarily reduce the burden of work or study and engage in more relaxing activities, such as deep breathing, yoga or walking. You can increase the length of sleep or nap appropriately to ensure the quality of sleep and help restore energy.</string>
+    <string name="tire_excessive_tip">Excessive fatigue can seriously affect your physical and mental health, and it is recommended that you immediately stop your current activities, get plenty of rest, and seek help from a doctor or professional. Don\'t ignore your body\'s warnings and take timely steps to recover.</string>
+    <string name="tire_25_tip">0~25 normal</string>
+    <string name="tire_50_tip">26~50 slight</string>
+    <string name="tire_90_tip">51~90 intermediate</string>
+    <string name="tire_100_tip">91~100 excessive</string>
+
+    <string name="emotion_analysis">Emotion analysis</string>
+    <string name="emotion_status">Emotional state</string>
+    <string name="passive">passive</string>
+    <string name="vigorous">vigorous</string>
+    <string name="emotion_passive_tip">You may be experiencing negative emotions, feeling a bit stressed and insecure. Please pay attention to adjust your mentality, try to find the root cause of the problem, and find the appropriate solution. Keep a positive attitude, give yourself time and space to adjust, and remember to keep your body and mind in balance, and don\'t overdo it.</string>
+    <string name="emotion_steady_tip">Your overall emotional performance is relatively stable, which is an important mentality in the face of various challenges. Continue to maintain this balance and don\'t let external changes and distractions disturb your inner self. At the same time, we should dare to accept the small challenges in life, exercise our ability to regulate our emotions, and make ourselves more resilient and confident.</string>
+    <string name="emotion_vigorous_tip">Your mood is positive, always full of motivation and energy. Continuing to maintain this positive attitude and meet every challenge in life helps to constantly train yourself and make it easier to overcome difficulties when faced with challenges.</string>
+
+
+</resources>

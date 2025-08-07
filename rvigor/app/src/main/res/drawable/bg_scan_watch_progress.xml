@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="360">
+
+    <!-- android:innerRadius 尺寸，内环的半径。
+     android:innerRadiusRatio 浮点型，以环的宽度比率来表示内环的半径，
+     android:thickness 尺寸，环的厚度
+     android:thicknessRatio 浮点型，以环的宽度比率来表示环的厚度，例如，如果android:thicknessRatio="2"，
+     android:useLevel boolean值，如果当做是LevelListDrawable使用时值为true，否则为false.
+     下面的属性只有在android:shape="ring"时可用,其他的属性。-->
+
+    <shape
+        android:innerRadiusRatio="700"
+        android:shape="ring"
+        android:thicknessRatio="2.1"
+        android:useLevel="false">
+
+        <gradient
+            android:angle="315"
+            android:centerColor="#55cfebe5"
+            android:centerY="0.50"
+            android:endColor="#55acf2e7"
+            android:startColor="#00FFFFFF"
+            android:type="sweep"
+            android:useLevel="false" />
+
+    </shape>
+
+</rotate>

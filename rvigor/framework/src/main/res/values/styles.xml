@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BaseTheme.Dialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
+    </style>
+
+    <style name="BaseTheme.Dialog.Bottom" parent="BaseTheme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anim_dialog_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_dialog_bottom_exit</item>
+    </style>
+</resources>

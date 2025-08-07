@@ -1,0 +1,172 @@
+package com.healthy.rvigor.view;
+
+import android.animation.TimeInterpolator;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.SweepGradient;
+import android.util.AttributeSet;
+import android.util.DebugUtils;
+import android.view.View;
+
+import com.healthbit.framework.util.DeviceUtil;
+import com.healthy.rvigor.R;
+
+
+public class CirclePercentBar extends View {
+    private Context mContext;
+    private int mArcColor;
+    private int mArcBgColor;
+    private int mArcWidth;
+    private int mCenterTextColor;
+    private int mCenterTextSize;
+    private int mCircleRadius;
+    private Paint arcPaint;
+    private Paint arcCirclePaint;
+    private Paint centerTextPaint;
+    private RectF arcRectF;
+    private Rect textBoundRect;
+    private float mCurData;
+    private int arcStartColor;
+    private int arcEndColor;
+    private Paint startCirclePaint;
+
+    public CirclePercentBar(Context context) {
+        this(context, (AttributeSet) null);
+    }
+
+    public CirclePercentBar(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public CirclePercentBar(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        mContext = context;
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CirclePercentBar, defStyleAttr, 0);
+        mArcColor = typedArray.getColor(R.styleable.CirclePercentBar_arcColor, Color.parseColor("#37D250"));
+        mArcBgColor = typedArray.getColor(R.styleable.CirclePercentBar_arcBgColor, Color.parseColor("#3E3E58"));
+        mArcWidth = typedArray.getDimensionPixelSize(R.styleable.CirclePercentBar_arcWidth, DeviceUtil.dip2px(context, 20));
+        mCenterTextColor = typedArray.getColor(R.styleable.CirclePercentBar_centerTextColor, 0x222222);
+        mCenterTextSize = typedArray.getDimensionPixelSize(R.styleable.CirclePercentBar_centerTextSize, DeviceUtil.dip2px(context, 20));
+        mCircleRadius = typedArray.getDimensionPixelSize(R.styleable.CirclePercentBar_circleRadius, DeviceUtil.dip2px(context, 100));
+        arcStartColor = typedArray.getColor(R.styleable.CirclePercentBar_arcStartColor,
+                Color.parseColor("#37D250"));
+        arcEndColor = typedArray.getColor(R.styleable.CirclePercentBar_arcEndColor,
+                Color.parseColor("#37D250"));
+
+        typedArray.recycle();
+
+        initPaint();
+    }
+
+    private void initPaint() {
+        startCirclePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        startCirclePaint.setStyle(Paint.Style.FILL);
+        //startCirclePaint.setStrokeWidth(mArcWidth);
+        startCirclePaint.setColor(arcStartColor);
+
+        arcCirclePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        arcCirclePaint.setStyle(Paint.Style.STROKE);
+        arcCirclePaint.setStrokeWidth(mArcWidth);
+        arcCirclePaint.setColor(mArcBgColor);
+        arcCirclePaint.setStrokeCap(Paint.Cap.ROUND);
+
+        arcPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        arcPaint.setStyle(Paint.Style.STROKE);
+        arcPaint.setStrokeWidth(mArcWidth);
+        arcPaint.setColor(mArcColor);
+        arcPaint.setStrokeCap(Paint.Cap.ROUND);
+
+        centerTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        centerTextPaint.setStyle(Paint.Style.STROKE);
+        centerTextPaint.setColor(mCenterTextColor);
+        centerTextPaint.setTextSize(mCenterTextSize);
+
+        //圓弧的外接矩形
+        arcRectF = new RectF();
+
+        //文字的边界矩形
+        textBoundRect = new Rect();
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        setMeasuredDimension(measureDimension(widthMeasureSpec), measureDimension(heightMeasureSpec));
+    }
+
+    private int measureDimension(int measureSpec) {
+        int result;
+        int specMode = MeasureSpec.getMode(measureSpec);
+        int specSize = MeasureSpec.getSize(measureSpec);
+        if (specMode == MeasureSpec.EXACTLY) {
+            result = specSize;
+        } else {
+            result = mCircleRadius * 2;
+            if (specMode == MeasureSpec.AT_MOST) {
+                result = Math.min(result, specSize);
+            }
+        }
+        return result;
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+
+        canvas.rotate(-90, getWidth() / 2, getHeight() / 2);
+
+        arcRectF.set(getWidth() / 2 - mCircleRadius + mArcWidth / 2, getHeight() / 2 - mCircleRadius + mArcWidth / 2
+                , getWidth() / 2 + mCircleRadius - mArcWidth / 2, getHeight() / 2 + mCircleRadius - mArcWidth / 2);
+
+        canvas.drawArc(arcRectF, 0, 360, false, arcCirclePaint);
+
+        if (mCurData > 0) {
+            arcPaint.setShader(new SweepGradient(getWidth() / 2, getHeight() / 2, arcStartColor, arcEndColor));
+            canvas.drawArc(arcRectF, 0, 360 * mCurData / 100, false, arcPaint);
+            canvas.rotate(90, getWidth() / 2, getHeight() / 2);
+            canvas.drawCircle(getWidth() / 2, getHeight() / 2 - mCircleRadius + mArcWidth / 2, mArcWidth / 2, startCirclePaint);
+//            String data = String.valueOf(mCurData) + "";
+//            centerTextPaint.getTextBounds(data, 0, data.length(), textBoundRect);
+//            canvas.drawText(data, getWidth() / 2 - textBoundRect.width() / 2, getHeight() / 2 + textBoundRect.height() / 2, centerTextPaint);
+        }
+
+    }
+
+    public void setPercentData(int data, TimeInterpolator interpolator) {
+//        ValueAnimator valueAnimator = ValueAnimator.ofInt((int) mCurData, data);
+//        valueAnimator.setDuration((long) (Math.abs(mCurData - data) * 30));
+//        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+//                int value = (int) valueAnimator.getAnimatedValue();
+                mCurData = (int) (Math.round(data * 10)) / 10;
+                invalidate();
+//            }
+//        });
+//        valueAnimator.setInterpolator(interpolator);
+//        valueAnimator.start();
+    }
+
+    public void setArcColor(int color) {
+        if (arcPaint == null) return;
+        mArcColor = color;
+        arcStartColor = color;
+        arcEndColor = color;
+        arcPaint.setColor(mArcColor);
+        startCirclePaint.setColor(arcStartColor);
+        invalidate();
+    }
+
+    public void setPerColor(int arcColor, int startColor, int endColor){
+        mArcColor = arcColor;
+        arcStartColor = startColor;
+        arcEndColor = endColor;
+        arcPaint.setColor(mArcColor);
+        startCirclePaint.setColor(arcStartColor);
+        invalidate();
+    }
+}

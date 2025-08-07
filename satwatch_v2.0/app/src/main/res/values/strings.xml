@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">SdkSatWatch</string>
+
+    <string name="device_bound">设备已绑定</string>
+    <string name="device_not_bound">设备未绑定</string>
+    <string name="state_connect">已连接</string>
+    <string name="state_disconnect">已断开</string>
+    <string name="state_connect_fail">连接失败</string>
+    <string name="state_connecting">连接中</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    <string name="bind">绑定</string>
+    <string name="un_bind">解绑</string>
+    <string name="auto_connect_device">自动判断-连接设备或绑定</string>
+    <string name="connect_device">连接已绑定设备</string>
+    <string name="set_userinfo">设置用户信息</string>
+    <string name="sync_time">同步时间</string>
+    <string name="find_device">找手环</string>
+    <string name="get_deviceinfo">获取设备信息</string>
+    <string name="return_factory">恢复出厂设置</string>
+    <string name="set_wear">佩戴方式</string>
+    <string name="wear_left">左手</string>
+    <string name="wear_right">右手</string>
+    <string name="set_gap_time">设置采样间隔</string>
+    <string name="set_unit">单位设置</string>
+    <string name="metric">公制</string>
+    <string name="inch">英制</string>
+    <string name="set_clock">时钟格式</string>
+    <string name="set_language">语言类型</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_english">英文</string>
+    <string name="bright_screen">抬手亮屏</string>
+    <string name="switch_screen">转腕切屏</string>
+    <string name="po_heart">整点心率</string>
+    <string name="wo_heart">连续心率</string>
+    <string name="disturb_model">勿扰模式</string>
+    <string name="heart_high">心率过高提醒</string>
+    <string name="snore_monitor">开启打鼾监测</string>
+    <string name="measurement">测量</string>
+    <string name="app_noti">APP提醒</string>
+    <string name="device_noti">设备提醒</string>
+    <string name="device_photo">摇一摇拍照</string>
+    <string name="device_clock">手环闹钟</string>
+
+
+    <!--设备设置-->
+    <string name="add">添加</string>
+    <string name="delete">删除</string>
+    <string name="save">保存</string>
+    <string name="my_switch">开关</string>
+    <string name="time">时间</string>
+    <string name="change_time">修改时间</string>
+    <string name="interval">间隔</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="save_medical">保存吃药提醒设置</string>
+    <string name="save_sit">保存久坐提醒设置</string>
+    <string name="save_drink">保存喝水提醒设置</string>
+    <string name="save_meeting">保存会议提醒设置</string>
+    <!--测量相关-->
+    <string name="calibration">校准</string>
+    <string name="update_data">上传测量结果</string>
+    <string name="heart">心率</string>
+    <string name="sbp">收缩压</string>
+    <string name="dbp">舒张压</string>
+    <string name="health_index">健康指数</string>
+    <string name="health_hrv_index">HRV指数</string>
+    <string name="health_fatigue_index">疲劳指数</string>
+    <string name="health_load_index">负荷指数</string>
+    <string name="health_body_index">身体指数</string>
+    <string name="health_heart_index">心脏指数</string>
+
+    <string name="dailog1_title">提示</string>
+    <string name="dailog1_message">恢复出厂</string>
+    <string name="dailog1_positive">确定</string>
+    <string name="dailog1_negative">取消</string>
+    <string name="dailog2_title">开启通知提示</string>
+    <string name="dailog2_message">请求开启APP通知服务</string>
+    <string name="dailog2_positive">确定</string>
+    <string name="dailog2_negative">取消</string>
+
+    <string name="tip_permission_header">请允许APP获得以下权限</string>
+    <string name="tip_permission_camera">·照相权限，用于拍摄功能</string>
+    <string name="tip_permission_phone">·手机状态权限，仅获取设备的状态，不监控通话记录</string>
+    <string name="tip_permission_storage">·存储权限，用于保存文件</string>
+    <string name="tip_permission_bluetooth">·蓝牙权限，用于链接手表</string>
+    <string name="tip_permission_location">·定位权限，用于查看手表位置</string>
+
+    <string name="tip_allow_permission">请授权必要权限以便APP为您提供更好的服务</string>
+
+    <string name="rtkbt_ota_toast_ota_success">升级成功，成功代码：%s</string>
+    <string name="rtkbt_ota_toast_ota_failed">升级失败，\n%s</string>
+    <string name="rtk_text_ota_is_processing">正在进行固件升级</string>
+    <string name="rtk_text_ota_is_processing_exist">正在进行固件升级，确定要退出吗</string>
+    <string name="rtk_cancel">取消</string>
+    <string name="rtk_message_exit_app">确认退出应用?</string>
+    <string name="rtk_ok">确定</string>
+    <string name="rtkbt_dfu_tick_message_active_image_success">镜像升级成功，正在激活，请勿重启设备（%d秒）</string>
+    <string name="rtkbt_dfu_finish_message_active_image_success">镜像升级成功</string>
+    <string name="rtkbt_ota_no_ble">设备不支持BLE</string>
+    <string name="rtkbt_ota_toast_bt_enabled">蓝牙已打开</string>
+    <string name="rtkbt_ota_toast_bt_not_enabled">蓝牙未打开</string>
+    <string name="rtkbt_ota_connect_device">正在与设备：%1$s建立连接，请稍等片刻…</string>
+    <string name="rtk_toast_no_device">设备未连接</string>
+    <string name="text_no_file">文件未加载</string>
+    <string name="rtk_toast_operation_failed">操作失败</string>
+    <string name="rtk_dfu_throught">数据量：%1$s, 耗时：%2$s, 速率：%3$s</string>
+    <string name="rtkbt_ota_dfu_service_unsupport">Dfu模式不支持</string>
+    <string name="rtk_dfu_title_select_file_type">选择文件类型</string>
+    <string name="rtk_dfu_title_device_info">设备信息</string>
+    <string name="rtk_dfu_toast_active_image">固件已经下载到对端设备并校验正确，是否激活？</string>
+    <string name="rtkbt_ota_sure">确定</string>
+    <string name="rtkbt_ota_yes">是</string>
+    <string name="rtkbt_ota_no">否</string>
+    <string name="rtkbt_ota_ok">好的</string>
+</resources>

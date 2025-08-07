@@ -1,0 +1,5 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@mipmap/ic_ox_anim" android:duration="1000" />
+    <item android:drawable="@mipmap/ic_ox_anim" android:duration="1000" />
+    <!-- 更多帧 -->
+</animation-list>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_ffffff">#FFFFFFFF</color>
+
+    <color name="color_main_50be91">#6593F7</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="gray_f6">#F6F6F6</color>
+
+    <color name="black_85">#858585</color>
+    <color name="black_22">#222222</color>
+
+    <!--背景颜色-->
+    <color name="color_171525">#171525</color>
+    <color name="color_000001">#000001</color>
+    <color name="color_1A192A">#1A192A</color>
+    <color name="color_7C7D8C">#7C7D8C</color>
+    <color name="color_6DFFE9">#6DFFE9</color>
+    <color name="color_FE475A">#FE475A</color>
+    <color name="color_C53B11">#C53B11</color>
+    <color name="color_46F79F">#46F79F</color>
+
+    <color name="calendar_cur_day_color">#FE475A</color>
+
+</resources>

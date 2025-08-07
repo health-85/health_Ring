@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:id="@+id/dialog_icon"
+               android:layout_width="40dp"
+               android:layout_height="40dp">
+
+           </ImageView>
+           <TextView
+               android:text="提醒周期"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               android:textColor="#000"
+               android:layout_toRightOf="@id/dialog_icon"
+               android:layout_alignBottom="@id/dialog_icon"
+               android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+           </TextView>
+       </RelativeLayout>
+
+       <ListView
+           android:layout_marginTop="10dp"
+           android:id="@+id/listview1"
+           android:layout_width="match_parent"
+           android:layout_height="200dp">
+
+       </ListView>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="40dp">
+               <TextView
+                   android:id="@+id/true_button"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"
+                   android:textColor="#FB8B2F"
+                   android:textSize="14sp"
+                   android:text="确定"
+                   android:padding="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+
+           <TextView
+               android:id="@+id/cancel_button"
+               android:layout_centerVertical="true"
+               android:layout_toLeftOf="@id/true_button"
+               android:textColor="#FB8B2F"
+               android:padding="10dp"
+               android:layout_marginRight="25dp"
+               android:textSize="14sp"
+               android:text="取消"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+           </TextView>
+       </RelativeLayout>
+</LinearLayout>

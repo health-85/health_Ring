@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/main_item_bg"
+            android:paddingBottom="13dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/event_overview"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_step_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="13dp"
+                android:drawableLeft="@drawable/svg_step"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/total_steps_today"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_overview" />
+
+            <TextView
+                android:id="@+id/tv_total_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#ffffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_step_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_step_title"
+                tools:text="6,497" />
+
+            <TextView
+                android:id="@+id/tv_step_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_total_step"
+                app:layout_constraintStart_toEndOf="@+id/tv_total_step"
+                tools:text="/8000" />
+
+            <TextView
+                android:id="@+id/tv_calorie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/svg_calorie"
+                android:drawablePadding="3dp"
+                android:text="@string/calorie_kilocalorie"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_step_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_step" />
+
+            <TextView
+                android:id="@+id/tv_calorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#ffffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_calorie_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_calorie_title"
+                tools:text="241" />
+
+            <TextView
+                android:id="@+id/tv_calorie_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_calorie"
+                app:layout_constraintStart_toEndOf="@+id/tv_calorie"
+                tools:text="/500" />
+
+            <TextView
+                android:id="@+id/tv_distance_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/svg_location"
+                android:drawablePadding="3dp"
+                android:text="@string/distance_km"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_step_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_calorie" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#ffffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_distance_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_distance_title"
+                tools:text="3.7" />
+
+            <TextView
+                android:id="@+id/tv_distance_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_distance"
+                app:layout_constraintStart_toEndOf="@+id/tv_distance"
+                tools:text="/5" />
+
+            <com.healthy.rvigor.view.MotionCircleView
+                android:id="@+id/bar_step_per"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_distance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_step_title"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:motionArcColor="#31232a"
+                app:motionArcEndColor="#F55F29"
+                app:motionArcStartColor="#FAB834"
+                app:motionArcWhiteCircleRadius="3dp"
+                app:motionArcWidth="15dp"
+                app:motionCircleRadius="80dp"
+                app:motionInnerArcWidth="15dp"
+                app:motionStartDrawable="@drawable/svg_white_step" />
+
+            <com.healthy.rvigor.view.MotionCircleView
+                android:id="@+id/bar_calorie_per"
+                android:layout_width="126dp"
+                android:layout_height="126dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_distance"
+                app:layout_constraintEnd_toEndOf="@+id/bar_step_per"
+                app:layout_constraintStart_toStartOf="@+id/bar_step_per"
+                app:layout_constraintTop_toTopOf="@+id/tv_step_title"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:motionArcColor="#31232a"
+                app:motionArcEndColor="#A61616"
+                app:motionArcStartColor="#DC3422"
+                app:motionArcWhiteCircleRadius="3dp"
+                app:motionArcWidth="15dp"
+                app:motionCircleRadius="63dp"
+                app:motionInnerArcWidth="15dp"
+                app:motionStartDrawable="@drawable/svg_white_calorie" />
+
+            <com.healthy.rvigor.view.MotionCircleView
+                android:id="@+id/bar_distance_per"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_distance"
+                app:layout_constraintEnd_toEndOf="@+id/bar_step_per"
+                app:layout_constraintStart_toStartOf="@+id/bar_step_per"
+                app:layout_constraintTop_toTopOf="@+id/tv_step_title"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:motionArcColor="#31232a"
+                app:motionArcEndColor="#174CDF"
+                app:motionArcStartColor="#2991D8"
+                app:motionArcWhiteCircleRadius="3dp"
+                app:motionArcWidth="15dp"
+                app:motionCircleRadius="46dp"
+                app:motionInnerArcWidth="15dp"
+                app:motionStartDrawable="@drawable/svg_white_location" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:paddingBottom="2dp"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_step_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="25dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="--"
+                    android:textColor="#ffffffff"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_step_uni"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="--" />
+
+                <TextView
+                    android:id="@+id/tv_step_uni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/step"
+                    android:textColor="#ff7c7d8c"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_step"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_step" />
+
+                <TextView
+                    android:id="@+id/tv_step_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#ff7c7d8c"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_step_uni"
+                    tools:text="15:00-16:00" />
+
+                <com.healthy.rvigor.view.MotionStepView
+                    android:id="@+id/step_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_step_time" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.healthy.rvigor.view.RectDataView
+                android:id="@+id/rect_data_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_step_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_strength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/main_item_bg"
+            android:paddingBottom="21dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_intensity_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/intensity_analysis"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_active_time_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/active_time"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_intensity_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_intensity_analysis" />
+
+            <TextView
+                android:id="@+id/tv_active_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#ffffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_intensity_analysis"
+                app:layout_constraintTop_toBottomOf="@+id/tv_active_time_tip" />
+
+            <TextView
+                android:id="@+id/tv_strength_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/to_enhanced"
+                android:textColor="#ffff8751"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_active_time"
+                app:layout_constraintStart_toEndOf="@+id/tv_active_time" />
+
+            <TextView
+                android:id="@+id/tv_strength_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:text="@string/to_enhanced_tip"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_strength_status" />
+
+            <ImageView
+                android:id="@+id/img_low_strength"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_f9a933_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_strength_tip" />
+
+            <TextView
+                android:id="@+id/tv_low_strength_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/low_strength"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_low_strength"
+                app:layout_constraintStart_toEndOf="@+id/img_low_strength"
+                app:layout_constraintTop_toTopOf="@+id/img_low_strength" />
+
+            <TextView
+                android:id="@+id/tv_low_strength_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0m"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_low_strength"
+                app:layout_constraintStart_toEndOf="@+id/tv_low_strength_msg"
+                app:layout_constraintTop_toTopOf="@+id/img_low_strength" />
+
+            <ImageView
+                android:id="@+id/img_middle_strength"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_f9a933_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_low_strength" />
+
+            <TextView
+                android:id="@+id/tv_middle_strength_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/medial_strength"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_middle_strength"
+                app:layout_constraintStart_toEndOf="@+id/img_middle_strength"
+                app:layout_constraintTop_toTopOf="@+id/img_middle_strength" />
+
+            <TextView
+                android:id="@+id/tv_middle_strength_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0m"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_middle_strength"
+                app:layout_constraintStart_toEndOf="@+id/tv_middle_strength_msg"
+                app:layout_constraintTop_toTopOf="@+id/img_middle_strength" />
+
+            <ImageView
+                android:id="@+id/img_high_strength"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_f9a933_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_middle_strength" />
+
+            <TextView
+                android:id="@+id/tv_high_strength_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/high_strength"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_high_strength"
+                app:layout_constraintStart_toEndOf="@+id/img_high_strength"
+                app:layout_constraintTop_toTopOf="@+id/img_high_strength" />
+
+            <TextView
+                android:id="@+id/tv_high_strength_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0m"
+                android:textColor="#ff7c7d8c"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_high_strength"
+                app:layout_constraintStart_toEndOf="@+id/tv_high_strength_msg"
+                app:layout_constraintTop_toTopOf="@+id/img_high_strength" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
