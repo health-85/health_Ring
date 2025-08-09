@@ -1,8 +1,8 @@
 # HealthRing: 健康监测戒指开源项目
 
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/healthring.svg?style=for-the-badge)](https://github.com/yourusername/healthring/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/yourusername/healthring.svg?style=for-the-badge)](https://github.com/yourusername/healthring/network/members)
-[![GitHub License](https://img.shields.io/github/license/yourusername/healthring.svg?style=for-the-badge)](https://github.com/yourusername/healthring/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/health-85/health_Ring.svg?style=for-the-badge)](https://github.com/health-85/health_Ring/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/health-85/health_Ring.svg?style=for-the-badge)](https://github.com/health-85/health_Ring/network/members)
+[![GitHub License](https://img.shields.io/github/license/health-85/health_Ring.svg?style=for-the-badge)](https://github.com/health-85/health_Ring/blob/main/LICENSE)
 
 ## 项目背景
 
