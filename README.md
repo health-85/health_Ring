@@ -70,8 +70,8 @@ HealthRing 是由实翼智能科技（深圳）公司开发的一款开源健康
 
 1. **克隆项目**  
    ```bash
-   git clone https://github.com/yourusername/healthring.git
-   cd healthring
+   git clone https://github.com/health-85/health_Ring.git
+   cd health-85
 
 2. **打开项目**
 使用 Android Studio 打开项目。
