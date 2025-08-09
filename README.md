@@ -10,14 +10,16 @@
 
 ## 项目简介
 
-HealthRing 是一款开源的健康监测戒指项目，支持心率、血压、血氧等健康指标的实时监测。该项目包含完整的 Android 应用源码，支持与硬件设备的无缝连接，帮助用户随时随地掌握自己的健康状况。
+HealthRing 是由实翼智能科技（深圳）公司开发的一款开源健康监测戒指项目，支持心率、血压、血氧等健康指标的实时监测。该项目包含完整的 Android 应用源码，支持与硬件设备的无缝连接，帮助用户随时随地掌握自己的健康状况。
+
+**注意**：satwatch_v2.0与rvigor是开源的两套安卓app源码，其中satwatch_v2.0用于开发调试，rvigor为基于硬件开发的一款应用app。
 
 ## 硬件购买链接
 
 - **健康监测戒指**  
   [购买链接](https://m.tb.cn/h.hqLkoYc?tk=d9Rc473zHKVMF168)  
   *支持心率、步数、血氧、睡眠监测，适配多种尺寸，续航长达 7 天。*
-
+<img src="docs/ring.png" alt="HealthRing" title="HealthRing" width="200" />
 
 ## 快速体验
 
@@ -28,7 +30,7 @@ HealthRing 是一款开源的健康监测戒指项目，支持心率、血压、
 ### 软件安装
 
 1. **下载 APK**  
-   从 [Releases](https://github.com/yourusername/healthring/releases) 页面下载最新版本的 APK 文件。
+   从 [Releases](https://github.com/health-85/health_Ring/blob/master/rvigor/app/release) 页面下载最新版本的 APK 文件。
 
 2. **安装 APK**  
    将下载的 APK 文件传输到你的 Android 设备上，通过文件管理器安装。
@@ -38,6 +40,19 @@ HealthRing 是一款开源的健康监测戒指项目，支持心率、血压、
 
 4. **开始监测**  
    在主界面查看实时心率、血压、血氧数据。
+   
+<table>
+  <tr>
+    <td><img src="docs/rvigor1.jpg" alt="RvigorApp" title="RvigorApp" width="200" /></td>
+    <td><img src="docs/rvigor2.jpg" alt="RvigorApp" title="RvigorApp" width="200" /></td>
+    <td><img src="docs/rvigor3.jpg" alt="RvigorApp" title="RvigorApp" width="200" /></td>
+  </tr>
+  <tr>
+    <td>状态</td>
+    <td>睡眠监测</td>
+    <td>我的设置</td>
+  </tr>
+</table>
 
 ## 详细接入指南
 
@@ -105,7 +120,12 @@ HealthRing 是一款开源的健康监测戒指项目，支持心率、血压、
 本项目遵循 MIT LICENSE。
 
 ### 联系我们
-有任何问题或建议，请随时提交 Issue 或联系我们的开发团队：
+有任何问题建议或者需要定制开发，请随时联系我们的开发团队：
+
 -**Email**：kevin@realwing.com
+
+### 技术交流
+欢迎添加技术交流群
+QQ:551692973
 
 感谢你的支持！
