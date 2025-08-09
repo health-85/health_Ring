@@ -15,7 +15,7 @@ HealthRing 是一款开源的健康监测戒指项目，支持心率、血压、
 ## 硬件购买链接
 
 - **健康监测戒指**  
-  [购买链接](https://example.com/buy-healthring)  
+  [购买链接](https://m.tb.cn/h.hqLkoYc?tk=d9Rc473zHKVMF168)  
   *支持心率、步数、血氧、睡眠监测，适配多种尺寸，续航长达 7 天。*
 
 
@@ -23,7 +23,7 @@ HealthRing 是一款开源的健康监测戒指项目，支持心率、血压、
 
 ### 硬件准备
 
- **健康监测戒指**：购买链接 [点击这里](https://example.com/buy-healthring)
+ **健康监测戒指**：购买链接（闲鱼店铺） [点击这里](https://m.tb.cn/h.hqLkoYc?tk=d9Rc473zHKVMF168)
 
 ### 软件安装
 
