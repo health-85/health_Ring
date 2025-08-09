@@ -106,7 +106,7 @@ HealthRing 是一款开源的健康监测戒指项目，支持心率、血压、
 在 GitHub 上发起 Pull Request，等待审核。
 
 ### 许可证
-本项目遵循 MIT License。
+本项目遵循 MIT LICENSE。
 
 ### 联系我们
 有任何问题或建议，请随时提交 Issue 或联系我们的开发团队：
