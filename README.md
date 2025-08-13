@@ -1,8 +1,23 @@
-# HealthRing: 健康监测戒指开源项目
 
-[![GitHub Stars](https://img.shields.io/github/stars/health-85/health_Ring.svg?style=for-the-badge)](https://github.com/health-85/health_Ring/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/health-85/health_Ring.svg?style=for-the-badge)](https://github.com/health-85/health_Ring/network/members)
-[![GitHub License](https://img.shields.io/github/license/health-85/health_Ring.svg?style=for-the-badge)](https://github.com/health-85/health_Ring/blob/main/LICENSE)
+<h1 align="center">HealthRing: 健康监测戒指开源项目</h1>
+
+<p align="center">
+<a href="./README_en.md">English</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/health-85/health_Ring/network/members">
+    <img alt="forks" src="https://img.shields.io/github/forks/health-85/health_Ring.svg?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/health-85/health_Ring/blob/main/LICENSE">
+    <img alt="GitHub pull requests" src="https://img.shields.io/github/license/health-85/health_Ring.svg?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/health-85/health_Ring/stargazers">
+    <img alt="stars" src="https://img.shields.io/github/stars/health-85/health_Ring.svg?style=for-the-badge" />
+  </a>
+</p>
+
+
 
 ## 项目背景
 
