@@ -125,7 +125,7 @@ HealthRing 是由实翼智能科技（深圳）公司开发的一款开源健康
 
    <img src="docs/img/gj3.png" alt="HealthRing" title="HealthRing" width="200" />
 
-4. 选中固件包--smartring-sy.zip
+4. 选中固件包--[smartring-sy.zip](smartring-sy.zip)
 
    <img src="docs/img/gj4.png" alt="HealthRing" title="HealthRing" width="200" />
 
