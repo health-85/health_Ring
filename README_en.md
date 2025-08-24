@@ -53,7 +53,7 @@ HealthRing is an open-source health monitoring ring project developed by Shiying
 3. **Connecting devices**  
    Open the app, go to the main interface, tap “Connect Device,” and select your health monitoring ring.
 
-4. **开始监测**  
+4. **Start monitoring**  
    View real-time heart rate, blood pressure, and blood oxygen data on the main interface.
    
 <table>
@@ -112,6 +112,28 @@ Connect your Android device and click the Run button in Android Studio.
 | Historical data records   | Supports viewing health data from the past 30 days.
 | Open source friendly       | Completely open source, supports custom feature extensions.                                           |
   
+### Firmware burning
+1. **mobile download nRF Toolbox APP**
+   
+   <img src="docs/img/gj1.png" alt="HealthRing" title="HealthRing" width="200" />
+
+2. **Open the app and select DFU.**
+
+   <img src="docs/img/gj2.png" alt="HealthRing" title="HealthRing" width="200" />
+
+3. **Search for devices and connect to the device named BIO-RING-XXXX.**
+
+   <img src="docs/img/gj3.png" alt="HealthRing" title="HealthRing" width="200" />
+
+4. **Select firmware package--[smartring-sy.zip](smartring-sy.zip)**
+
+   <img src="docs/img/gj4.png" alt="HealthRing" title="HealthRing" width="200" />
+
+5. **Click “Update” and wait for the upgrade to complete. Once complete, the device will automatically restart. Simply reconnect to Bluetooth to use it.**
+
+   <img src="docs/img/gj5.png" alt="HealthRing" title="HealthRing" width="200" />
+
+
 ### Agreement document
 Please refer to [Communication Protocol Documentation](docs/戒指通信协议V2.1.docx)
 
