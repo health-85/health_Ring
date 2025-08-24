@@ -115,23 +115,23 @@ HealthRing 是由实翼智能科技（深圳）公司开发的一款开源健康
 ### 固件烧录
 1. **手机下载nRF Toolbox APP
    
-   <img src="docs/ring.png" alt="HealthRing" title="HealthRing" width="200" />
+   <img src="docs/img/gj1.png" alt="HealthRing" title="HealthRing" width="200" />
 
 2. 打开APP，选择DFU
 
-   <img src="docs/ring.png" alt="HealthRing" title="HealthRing" width="200" />
+   <img src="docs/img/gj2.png" alt="HealthRing" title="HealthRing" width="200" />
 
 3. 搜索设备，连接名为BIO-RING-XXXX的设备
 
-   <img src="docs/ring.png" alt="HealthRing" title="HealthRing" width="200" />
+   <img src="docs/img/gj3.png" alt="HealthRing" title="HealthRing" width="200" />
 
 4. 选中固件包（）
 
-   <img src="docs/ring.png" alt="HealthRing" title="HealthRing" width="200" />
+   <img src="docs/img/gj4.png" alt="HealthRing" title="HealthRing" width="200" />
 
 5. 点击updata，等待升级完成，完成后设备会自动重启，重新连接蓝牙即可适用。
 
-   <img src="docs/ring.png" alt="HealthRing" title="HealthRing" width="200" />
+   <img src="docs/img/gj5.png" alt="HealthRing" title="HealthRing" width="200" />
 
   
 ### 协议文档
